@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Poppins:wght@400;600;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-0: #FFF7FD;
+    --bg-1: #FFFFFF;
+    --ink:  #241A3D;
+    --sub:  #6A5E86;
+
+    --g-cotton: linear-gradient(135deg, #7B61FF 0%, #FF4FD8 100%);
+    --g-aqua:   linear-gradient(135deg, #00D4FF 0%, #7B61FF 100%);
+    --g-lemon:  linear-gradient(135deg, #FFD166 0%, #FF4FD8 100%);
+    --g-party:  linear-gradient(90deg, #7B61FF, #FF4FD8, #00D4FF, #FFD166);
+
+    --sh-card: 0 8px 24px rgba(123, 97, 255, 0.12);
+    --sh-float: 0 14px 40px rgba(255, 79, 216, 0.14);
+  }
+
+  body {
+    @apply bg-surface0 text-ink min-h-screen font-sans;
+    background-image: 
+        radial-gradient(circle at 50% 0%, rgba(255, 79, 216, 0.15) 0%, rgba(255, 247, 253, 0) 60%),
+        radial-gradient(circle at 10% 20%, rgba(0, 212, 255, 0.05) 0%, transparent 20%),
+        radial-gradient(circle at 90% 40%, rgba(255, 209, 102, 0.05) 0%, transparent 20%);
+    background-repeat: no-repeat;
+  }
+}
+
+@layer components {
+  .btn-candy {
+    @apply bg-gradient-to-br from-[#7B61FF] to-[#FF4FD8] text-white rounded-pill px-8 py-3 font-semibold 
+    transition-all duration-200 ease-[cubic-bezier(0.4,0,0.2,1)] shadow-lg hover:-translate-y-0.5 hover:scale-[1.02] 
+    hover:brightness-110 active:translate-y-px active:scale-95 inline-flex items-center justify-center gap-2 border-2 border-white/60;
+    box-shadow: 0 4px 15px rgba(123, 97, 255, 0.4), inset 0 2px 2px rgba(255, 255, 255, 0.4);
+  }
+
+  .btn-ghost {
+    @apply bg-white/60 text-subtext rounded-pill px-8 py-3 font-semibold border border-[#6A5E86]/10 
+    transition-all duration-200 cursor-pointer hover:bg-white/90 hover:text-ink hover:-translate-y-px;
+  }
+
+  .card-juicy {
+    @apply bg-surface1 rounded-card shadow-[0_8px_24px_rgba(123,97,255,0.12)] border border-white/80 
+    transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] relative overflow-hidden;
+  }
+  
+  .card-juicy:hover {
+    @apply -translate-y-1.5 shadow-[0_14px_40px_rgba(255,79,216,0.14)];
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-br from-[#7B61FF] to-[#FF4FD8] bg-clip-text text-transparent;
+  }
+  
+  .active-nav {
+    @apply text-[#7B61FF] bg-[#F3F0FF];
+  }
+
+  .arch-bg {
+    @apply absolute -top-[100px] left-1/2 -translate-x-1/2 w-[120%] h-[600px] rounded-[50%_50%_0_0/100%_100%_0_0] 
+    bg-[radial-gradient(circle_at_50%_0%,rgba(123,97,255,0.05)_0%,rgba(255,247,253,0)_70%)] border-t-2 border-white/50 -z-10 pointer-events-none;
+  }
+}

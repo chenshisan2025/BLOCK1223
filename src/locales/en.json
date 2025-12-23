@@ -1,0 +1,46 @@
+{
+    "nav": { "play": "Play", "rewards": "Rewards", "events": "Events", "leaderboard": "Leaderboard", "login": "Login", "playNow": "Play Now", "help": "Help", "safety": "Safety", "invite": "Invite", "transparency": "Transparency" },
+    "hero": { "pill": "Welcome to the Arcade", "title1": "Play 60s.", "title2": "Open a Box.", "subtitle": "Your time finally pays back. As easy as a match game. Earn BWT + surprise drops.", "ctaPlay": "Play Now", "ctaWatch": "Watch Gameplay", "ctaInvite": "Invite & Earn", "badges": { "withdrawable": "Withdrawable", "humanOnly": "Human-only", "freeRounds": "Pass & Win", "referral10": "Invite 10%", "onchain": "On-chain Transparent", "chestDraw": "2-hour Chest Draw" }, "box": { "title": "Surprise Box", "sub": "USDT / BWT / NFTs", "cta": "Tap to Play" } },
+    "drops": { "title": "Today's Drops", "subtitle": "Play and you may run into special boxes.", "cta": "See Rewards" },
+    "aha": { "title": "Open a box. Get a surprise.", "subtitle": "Boxes can appear while you play. Rewards come from events and partner drops.", "points": ["No complicated setup", "Human-only rewards", "Withdraw when you're ready"], "demoNote": "Demo for illustration.", "ctaPlay": "Play Now", "ctaWatch": "Watch Gameplay", "demoCta": "Tap to Play", "rewardTitle": "You got", "treasureReferral": "Treasure & Referral" },
+    "steps": { "title": "Start in 3 Steps", "subtitle": "No crypto knowledge needed. Just fun.", "s1Title": "One-tap Login", "s1Body": "Use Google or Email. We create a secure game account.", "s2Title": "Play 60 Seconds", "s2Body": "Fast-paced match-3. Juicy effects.", "s3Title": "Open Boxes", "s3Body": "Open boxes to reveal rewards." },
+    "safety": { "title": "A park for real players.", "subtitle": "High-value rewards use human checks to protect fair play.", "cta": "Learn About Safety", "items": [{ "title": "Human-only rewards", "body": "Bots and scripted patterns don’t get paid." }, { "title": "On-chain transparent splits", "body": "High-value drops may require verification." }] },
+    "faq": { "title": "Quick Questions", "subtitle": "Everything you need before your first round.", "cta": "See all FAQs", "items": [{ "q": "Can I really withdraw?", "a": "Yes. Withdraw options depend on event rules." }, { "q": "Do I need a wallet?", "a": "No. Start like a normal game." }, { "q": "Where do rewards come from?", "a": "From events and partner drops." }, { "q": "Why didn't I get a box?", "a": "Boxes are not guaranteed every round." }, { "q": "How does referral work?", "a": "One-level only. You earn 10% of eligible spend." }, { "q": "How do Treasure Chest draws work?", "a": "Draws every 2 hours. 50% to 100 lucky winners, 50% shared among chest holders." }, { "q": "How can I verify the splits?", "a": "All flows are on-chain and shown in the Transparency Dashboard." }] },
+    "login": { "title": "Login", "subtitle": "Choose a way to start", "note": "By logging in, you agree to our Terms and Privacy Policy." },
+    "rewards": { "title": "Pass Rewards", "subtitle": "Level up to unlock more surprises.", "level": "Level", "claim": "Claim", "claimed": "Claimed", "inviteRewards": "Invite Rewards", "poolsSplits": "Pools & Splits", "transparency": "Transparency Teaser" },
+    "withdraw": { "title": "Withdraw", "balance": "Current Balance", "amount": "Withdraw Amount", "max": "Max", "method": "Withdraw Method", "submit": "Confirm Withdraw", "note": "Withdrawals are processed within 24 hours.", "breakdown": "Your balance includes: gameplay rewards / chest winnings / referral commissions", "verify": "Verify on-chain → Transparency Dashboard" },
+    "events": { "title": "Events", "subtitle": "More events coming soon, stay tuned!" },
+    "leaderboard": { "title": "Leaderboard", "subtitle": "The best of the best are here!" },
+    "invite": {
+        "title": "Invite & Earn 10%",
+        "subtitle": "Earn 10% BWT from your friend’s eligible spend (revives, tickets, items). One level only.",
+        "cta": "Get My Invite Link",
+        "note": "Human-only settlement. Anti-bot rules apply.",
+        "stats": { "invited": "Invited", "earned": "Today's Earn", "total": "Total Earn" }
+    },
+    "treasure": {
+        "title": "Treasure Chest Draw (Every 2 Hours)",
+        "subtitle": "Each revive grants a chest entry. Next draw in: {{countdown}}",
+        "cta": "View This Round",
+        "rule": "Revive 10 BWT → 50% pool / 30% burn / 10% referrer / 10% treasury",
+        "rules": "View Rules",
+        "winners": "See Last Winners"
+    },
+    "leaderboardPool": {
+        "title": "Endless Leaderboard Prize Pool",
+        "subtitle": "Tickets feed the pool. Climb the ranks to win prizes.",
+        "cta": "Play Endless",
+        "rule": "Ticket 20 BWT → 50% pool / 30% burn / 10% referrer / 10% treasury"
+    },
+    "transparency": {
+        "title": "On-chain Transparency",
+        "subtitle": "Pools, burns, referrals, and treasury—fully visible in real time.",
+        "cta": "Open Live Dashboard",
+        "cards": { "burn": "Burned Today", "pool": "Treasure Pool", "referral": "Referral Paid", "treasury": "Treasury" }
+    },
+    "chips": {
+        "treasurePool": "Treasure Pool",
+        "leaderboardPool": "Leaderboard Pool",
+        "playEndless": "Play Endless"
+    }
+}

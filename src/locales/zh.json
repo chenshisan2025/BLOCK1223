@@ -1,0 +1,46 @@
+{
+    "nav": { "play": "开玩", "rewards": "奖励盲盒", "events": "活动", "leaderboard": "排行榜", "login": "登录", "playNow": "立即开玩", "help": "帮助", "safety": "安全", "invite": "邀请返佣", "transparency": "透明看板" },
+    "hero": { "pill": "欢迎来到游戏乐园", "title1": "玩 60 秒。", "title2": "开一个盒子。", "subtitle": "你的时间终于开始回本。像三消一样轻松。赢取 BWT 与惊喜掉落奖励。", "ctaPlay": "立即开玩", "ctaWatch": "看玩法视频", "ctaInvite": "邀请返佣", "badges": { "withdrawable": "可提现", "humanOnly": "真人奖励", "freeRounds": "过关拿奖", "referral10": "邀请返 10%", "onchain": "链上透明", "chestDraw": "宝盒 2 小时开奖" }, "box": { "title": "惊喜盒子", "sub": "USDT / BWT / NFTs", "cta": "点一下开玩" } },
+    "drops": { "title": "今日掉落", "subtitle": "玩游戏时，可能会随机遇到特别盒子。", "cta": "查看奖励详情" },
+    "aha": { "title": "打开盒子，来点惊喜。", "subtitle": "玩的时候会随机遇到盒子。奖励来自活动与合作掉落。", "points": ["无需复杂设置", "真人才有奖励", "准备好了再提现"], "demoNote": "演示示例，奖励以活动规则为准。", "ctaPlay": "立即开玩", "ctaWatch": "看玩法视频", "demoCta": "点一下开玩", "rewardTitle": "你获得了", "treasureReferral": "宝盒与返佣" },
+    "steps": { "title": "3 步开玩", "subtitle": "不用懂币圈，只要开心。", "s1Title": "一键登录", "s1Body": "用 Google 或邮箱登录，自动创建安全账户。", "s2Title": "玩 60 秒", "s2Body": "快节奏三消，Q 弹特效。", "s3Title": "打开盒子", "s3Body": "打开盒子拿到奖励。" },
+    "safety": { "title": "这是给真人玩家的游乐园。", "subtitle": "高价值奖励会进行真人验证，保护公平体验。", "cta": "了解安全与公平", "items": [{ "title": "真人才有奖励", "body": "脚本与异常模式拿不到奖励。" }, { "title": "分账链上公开透明", "body": "高价值掉落可能需要额外验证。" }] },
+    "faq": { "title": "快速答疑", "subtitle": "开玩前你最关心的问题。", "cta": "查看全部 FAQ", "items": [{ "q": "真的能提现吗？", "a": "可以。提现方式会受活动规则影响。" }, { "q": "我需要懂钱包吗？", "a": "不需要。你可以先当作普通游戏玩。" }, { "q": "奖励从哪里来？", "a": "来自活动、合作掉落与奖池。" }, { "q": "为什么没遇到盒子？", "a": "盒子不是每局必出。" }, { "q": "邀请返佣怎么算？", "a": "只有一级 10% 返佣。" }, { "q": "宝盒怎么开奖？", "a": "每 2 小时开奖一次。50% 分给 100 位幸运儿，50% 由持有者平分。" }, { "q": "我怎么确认分账是真的？", "a": "所有资金流向链上公开，可在透明看板查看。" }] },
+    "login": { "title": "登录", "subtitle": "选择一种方式开始", "note": "登录即代表同意服务条款与隐私政策。" },
+    "rewards": { "title": "闯关奖励", "subtitle": "每升一级，解锁更多惊喜。", "level": "等级", "claim": "领取", "claimed": "已领取", "inviteRewards": "邀请返佣", "poolsSplits": "奖池与分账", "transparency": "透明看板" },
+    "withdraw": { "title": "提现", "balance": "当前余额", "amount": "提现金额", "max": "最大", "method": "提现方式", "submit": "确认提现", "note": "提现将在 24 小时内处理。", "breakdown": "您的余额包含：游戏奖励 / 宝盒奖金 / 邀请返佣", "verify": "链上核验 → 透明看板" },
+    "events": { "title": "精彩活动", "subtitle": "更多活动即将开启，敬请期待！" },
+    "leaderboard": { "title": "排行榜", "subtitle": "全服高手云集，虚位以待！" },
+    "invite": {
+        "title": "邀请返佣 10%",
+        "subtitle": "朋友每一次复活 / 门票 / 道具消费，你都能拿到 10% BWT 返佣（仅一级）。",
+        "cta": "获取我的邀请链接",
+        "note": "仅一级返佣；真人验证通过后结算；异常/脚本行为无返佣。",
+        "stats": { "invited": "已邀请人数", "earned": "今日返佣", "total": "累计返佣" }
+    },
+    "treasure": {
+        "title": "宝盒开奖（每 2 小时一次）",
+        "subtitle": "每次复活都会获得一个宝盒。下一次开奖倒计时：{{countdown}}",
+        "cta": "查看本轮奖池",
+        "rule": "复活 10 BWT：50% 进奖池、30% 销毁、10% 返邀请人、10% 平台。",
+        "rules": "规则说明",
+        "winners": "查看上轮赢家"
+    },
+    "leaderboardPool": {
+        "title": "无尽排行榜奖池",
+        "subtitle": "门票收入自动注入奖池，冲榜就有机会分奖金。",
+        "cta": "去无尽模式冲榜",
+        "rule": "门票 20 BWT：50% 奖池、30% 销毁、10% 返邀请人、10% 平台。"
+    },
+    "transparency": {
+        "title": "BWT 资金流向链上公开透明",
+        "subtitle": "奖池、销毁、返佣、平台金库，全都可实时核验。",
+        "cta": "打开实时透明看板",
+        "cards": { "burn": "今日已销毁", "pool": "宝盒奖池", "referral": "今日已返佣", "treasury": "平台金库" }
+    },
+    "chips": {
+        "treasurePool": "宝盒奖池",
+        "leaderboardPool": "排行榜奖池",
+        "playEndless": "冲榜分钱"
+    }
+}
