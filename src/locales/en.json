@@ -1,46 +1,991 @@
 {
-    "nav": { "play": "Play", "rewards": "Rewards", "events": "Events", "leaderboard": "Leaderboard", "login": "Login", "playNow": "Play Now", "help": "Help", "safety": "Safety", "invite": "Invite", "transparency": "Transparency" },
-    "hero": { "pill": "Welcome to the Arcade", "title1": "Play 60s.", "title2": "Open a Box.", "subtitle": "Your time finally pays back. As easy as a match game. Earn BWT + surprise drops.", "ctaPlay": "Play Now", "ctaWatch": "Watch Gameplay", "ctaInvite": "Invite & Earn", "badges": { "withdrawable": "Withdrawable", "humanOnly": "Human-only", "freeRounds": "Pass & Win", "referral10": "Invite 10%", "onchain": "On-chain Transparent", "chestDraw": "2-hour Chest Draw" }, "box": { "title": "Surprise Box", "sub": "USDT / BWT / NFTs", "cta": "Tap to Play" } },
-    "drops": { "title": "Today's Drops", "subtitle": "Play and you may run into special boxes.", "cta": "See Rewards" },
-    "aha": { "title": "Open a box. Get a surprise.", "subtitle": "Boxes can appear while you play. Rewards come from events and partner drops.", "points": ["No complicated setup", "Human-only rewards", "Withdraw when you're ready"], "demoNote": "Demo for illustration.", "ctaPlay": "Play Now", "ctaWatch": "Watch Gameplay", "demoCta": "Tap to Play", "rewardTitle": "You got", "treasureReferral": "Treasure & Referral" },
-    "steps": { "title": "Start in 3 Steps", "subtitle": "No crypto knowledge needed. Just fun.", "s1Title": "One-tap Login", "s1Body": "Use Google or Email. We create a secure game account.", "s2Title": "Play 60 Seconds", "s2Body": "Fast-paced match-3. Juicy effects.", "s3Title": "Open Boxes", "s3Body": "Open boxes to reveal rewards." },
-    "safety": { "title": "A park for real players.", "subtitle": "High-value rewards use human checks to protect fair play.", "cta": "Learn About Safety", "items": [{ "title": "Human-only rewards", "body": "Bots and scripted patterns don’t get paid." }, { "title": "On-chain transparent splits", "body": "High-value drops may require verification." }] },
-    "faq": { "title": "Quick Questions", "subtitle": "Everything you need before your first round.", "cta": "See all FAQs", "items": [{ "q": "Can I really withdraw?", "a": "Yes. Withdraw options depend on event rules." }, { "q": "Do I need a wallet?", "a": "No. Start like a normal game." }, { "q": "Where do rewards come from?", "a": "From events and partner drops." }, { "q": "Why didn't I get a box?", "a": "Boxes are not guaranteed every round." }, { "q": "How does referral work?", "a": "One-level only. You earn 10% of eligible spend." }, { "q": "How do Treasure Chest draws work?", "a": "Draws every 2 hours. 50% to 100 lucky winners, 50% shared among chest holders." }, { "q": "How can I verify the splits?", "a": "All flows are on-chain and shown in the Transparency Dashboard." }] },
-    "login": { "title": "Login", "subtitle": "Choose a way to start", "note": "By logging in, you agree to our Terms and Privacy Policy." },
-    "rewards": { "title": "Pass Rewards", "subtitle": "Level up to unlock more surprises.", "level": "Level", "claim": "Claim", "claimed": "Claimed", "inviteRewards": "Invite Rewards", "poolsSplits": "Pools & Splits", "transparency": "Transparency Teaser" },
-    "withdraw": { "title": "Withdraw", "balance": "Current Balance", "amount": "Withdraw Amount", "max": "Max", "method": "Withdraw Method", "submit": "Confirm Withdraw", "note": "Withdrawals are processed within 24 hours.", "breakdown": "Your balance includes: gameplay rewards / chest winnings / referral commissions", "verify": "Verify on-chain → Transparency Dashboard" },
-    "events": { "title": "Events", "subtitle": "More events coming soon, stay tuned!" },
-    "leaderboard": { "title": "Leaderboard", "subtitle": "The best of the best are here!" },
+  "brand": {
+    "name": "BLOCKWORLD",
+    "short": "BLOCKWORLD",
+    "slogan": "Web2 makes your time worth zero. Web3 lets your time pay back.",
+    "tagline": "Human-only Arcade",
+    "mission": "Turn 3B casual Web2 players into Web3 citizens."
+  },
+  "terms": {
+    "bwtToken": "BWT (Token)",
+    "token": "Token",
+    "treasury": "Treasury",
+    "referral": "Referral",
+    "burn": "Burn",
+    "pool": "Pool",
+    "treasurePool": "Treasure Pool",
+    "leaderboardPool": "Leaderboard Pool",
+    "sponsor": "Sponsor",
+    "sponsorBox": "Sponsor Box",
+    "proofOfHuman": "Proof-of-Human",
+    "verifiedRun": "Verified Run",
+    "onChain": "On-chain",
+    "demo": "Demo",
+    "simulated": "Simulated",
+    "campaign": "Campaign",
+    "withdraw": "Withdraw",
+    "revive": "Revive",
+    "ticket": "Ticket",
+    "itemPacks": "Item Packs",
+    "storyMode": "Story Mode",
+    "endlessMode": "Endless Mode",
+    "leaderboard": "Leaderboard",
+    "address": "Address",
+    "transaction": "Transaction",
+    "explorer": "Explorer"
+  },
+  "nav": {
+    "play": "Play",
+    "rewards": "Rewards",
+    "leaderboard": "Leaderboard",
+    "invite": "Invite & Earn",
+    "transparency": "Transparency",
+    "help": "Help",
+    "sponsors": "For Sponsors",
+    "investors": "For Investors",
+    "startPlaying": "Start Playing",
+    "language": "Language",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "seo": {
+    "global": {
+      "siteName": "BLOCKWORLD",
+      "defaultTitle": "BLOCKWORLD — Web3 Arcade",
+      "defaultDescription": "Play 60s. Open a box. As easy as a match game—earn BWT (token) and surprise drops."
+    },
+    "home": {
+      "title": "BLOCKWORLD | Play 60s. Open a Box.",
+      "description": "No crypto knowledge required. Play, open boxes, withdraw when ready—human-only rewards with on-chain transparency."
+    },
+    "rewards": {
+      "title": "Rewards | Rules, Pools & Splits",
+      "description": "Explore progress rewards, pool splits, Sponsor Box mechanics, and on-chain verification."
+    },
+    "leaderboard": {
+      "title": "Leaderboard | Endless Mode & Prize Pool",
+      "description": "First daily run is free. Tickets fund the pool. Compete and verify splits on-chain."
+    },
     "invite": {
-        "title": "Invite & Earn 10%",
-        "subtitle": "Earn 10% BWT from your friend’s eligible spend (revives, tickets, items). One level only.",
-        "cta": "Get My Invite Link",
-        "note": "Human-only settlement. Anti-bot rules apply.",
-        "stats": { "invited": "Invited", "earned": "Today's Earn", "total": "Total Earn" }
-    },
-    "treasure": {
-        "title": "Treasure Chest Draw (Every 2 Hours)",
-        "subtitle": "Each revive grants a chest entry. Next draw in: {{countdown}}",
-        "cta": "View This Round",
-        "rule": "Revive 10 BWT → 50% pool / 30% burn / 10% referrer / 10% treasury",
-        "rules": "View Rules",
-        "winners": "See Last Winners"
-    },
-    "leaderboardPool": {
-        "title": "Endless Leaderboard Prize Pool",
-        "subtitle": "Tickets feed the pool. Climb the ranks to win prizes.",
-        "cta": "Play Endless",
-        "rule": "Ticket 20 BWT → 50% pool / 30% burn / 10% referrer / 10% treasury"
+      "title": "Invite & Earn | 10% One-level Referral",
+      "description": "Invite friends and earn one-level referral. Settlement requires human verification."
     },
     "transparency": {
-        "title": "On-chain Transparency",
-        "subtitle": "Pools, burns, referrals, and treasury—fully visible in real time.",
-        "cta": "Open Live Dashboard",
-        "cards": { "burn": "Burned Today", "pool": "Treasure Pool", "referral": "Referral Paid", "treasury": "Treasury" }
+      "title": "Transparency | On-chain and Verifiable",
+      "description": "Pools, burn, referral, and treasury—publicly verifiable with live-like feeds and verification guide."
     },
-    "chips": {
-        "treasurePool": "Treasure Pool",
-        "leaderboardPool": "Leaderboard Pool",
-        "playEndless": "Play Endless"
+    "help": {
+      "title": "Help Center | Rules, Withdrawals, Safety",
+      "description": "Full rules for modes, treasure draws, referrals, withdrawals, anti-bot, and verification."
+    },
+    "sponsors": {
+      "title": "For Sponsors | Human-only Delivery with Verifiable Reporting",
+      "description": "Turn marketing budgets into real player rewards—measurable, auditable, and on-chain verifiable."
+    },
+    "investors": {
+      "title": "For Investors | The Mass Adoption Protocol for Web3",
+      "description": "Casual games as a frictionless Web3 gateway: account system + Sponsor Engine + Proof-of-Human + on-chain transparency."
+    },
+    "legal": {
+      "title": "Rules & Policies",
+      "description": "Official Rules (AMOE), Terms of Service, Privacy Policy, and risk disclosures."
     }
+  },
+  "common": {
+    "label": {
+      "live": "LIVE",
+      "demo": "Demo",
+      "simulated": "Simulated",
+      "updatedAt": "Updated",
+      "network": "Network",
+      "endsIn": "Ends in",
+      "nextDrawIn": "Next draw in",
+      "estReward": "Est. Reward",
+      "poweredBy": "Powered by",
+      "learn": "Learn",
+      "more": "More",
+      "optional": "Optional",
+      "recommended": "Recommended",
+      "new": "NEW",
+      "beta": "BETA"
+    },
+    "badge": {
+      "noWallet": "No wallet needed to start",
+      "withdrawable": "Withdrawable (rules apply)",
+      "humanOnly": "Human-only rewards",
+      "onChainTransparent": "On-chain transparent",
+      "fairPlay": "Fair play",
+      "demoData": "Demo data",
+      "simulatedEffect": "Simulated effect"
+    },
+    "cta": {
+      "startPlaying": "Start Playing",
+      "playNow": "Play Now",
+      "watchDemo": "Watch 60s Demo",
+      "watchGameplay": "Watch Gameplay",
+      "openBox": "Open Box",
+      "openNow": "Open now",
+      "playAgain": "Play again",
+      "backHome": "Back home",
+      "back": "Back",
+      "next": "Next",
+      "close": "Close",
+      "confirm": "Confirm",
+      "cancel": "Cancel",
+      "submit": "Submit",
+      "refresh": "Refresh",
+      "copy": "Copy",
+      "copied": "Copied",
+      "share": "Share",
+      "generatePoster": "Generate poster",
+      "seeRewards": "See rewards →",
+      "seeDetails": "See details →",
+      "seeAllFaq": "See all FAQs →",
+      "seeAllRules": "See all rules →",
+      "verifyOnTransparency": "Verify on Transparency →",
+      "verifyOnChain": "Verify on-chain →",
+      "openInExplorer": "Open in explorer →",
+      "downloadSponsorKit": "Get Sponsor Kit (PDF)",
+      "downloadInvestorKit": "Download Investor Kit (Deck + Memo)",
+      "bookCall": "Book a call",
+      "contactBD": "Contact BD",
+      "contactInvestor": "Investor contact",
+      "learnSafety": "Learn about safety →",
+      "claim": "Claim",
+      "claimed": "Claimed",
+      "withdraw": "Withdraw",
+      "max": "MAX",
+      "upgrade": "Upgrade in 1 tap",
+      "turnOnDemo": "Enable demo mode",
+      "switchLanguage": "Switch language"
+    },
+    "status": {
+      "loading": "Loading…",
+      "syncing": "Syncing…",
+      "success": "Success",
+      "failed": "Failed",
+      "pending": "Pending",
+      "claimable": "Claimable",
+      "locked": "Locked",
+      "verified": "Verified",
+      "unverified": "Unverified",
+      "loggedIn": "Logged in",
+      "loggedOut": "Logged out",
+      "comingSoon": "Coming soon",
+      "maintenance": "Maintenance"
+    },
+    "empty": {
+      "noRecords": "No records yet. Check back soon.",
+      "noCampaignsToday": "No special campaigns today, but random boxes may still appear in-game.",
+      "notLoggedIn": "Log in to see full details.",
+      "noRewards": "No claimable rewards right now. Play a few more rounds.",
+      "noInvites": "No invites yet. Copy your invite link and share it."
+    },
+    "toast": {
+      "linkCopied": "Copied! Send it to a friend.",
+      "copiedInviteCode": "Invite code copied.",
+      "openedBox": "You opened a box!",
+      "actionRequiresLogin": "Please log in to continue."
+    },
+    "error": {
+      "unknown": "Something went wrong. Please try again.",
+      "network": "Network error. Check your connection and retry.",
+      "rateLimited": "Too many requests. Please try again later.",
+      "notSupportedRegion": "This feature isn’t available in your region.",
+      "ageRestricted": "You must meet the age requirement to participate.",
+      "invalidEmail": "Invalid email format.",
+      "invalidAddress": "Invalid address format.",
+      "insufficientBalance": "Insufficient balance.",
+      "verificationFailed": "Verification failed. Please retry or contact support."
+    },
+    "form": {
+      "email": "Email",
+      "code": "Verification code",
+      "address": "Receiving address",
+      "amount": "Amount",
+      "asset": "Select asset",
+      "network": "Network",
+      "note": "Note (optional)"
+    },
+    "validation": {
+      "required": "This field is required.",
+      "min": "Must be at least {{min}}.",
+      "max": "Must be at most {{max}}.",
+      "between": "Enter a value between {{min}} and {{max}}."
+    },
+    "tooltip": {
+      "demoData": "This is demo data for illustrating mechanics. Live metrics will follow on-chain records and reports after launch.",
+      "simulatedPartnership": "This is a simulated display. Not a real partnership or real funding display.",
+      "onChainProof": "Open the explorer to verify amount, addresses, and events.",
+      "humanOnly": "High-value rewards may require human verification. Bots don’t settle.",
+      "estimatedReward": "Estimated rewards are illustrative; final settlement depends on pool size and rules."
+    },
+    "aria": {
+      "openMenu": "Open navigation menu",
+      "closeMenu": "Close navigation menu",
+      "switchLanguage": "Switch language",
+      "openLogin": "Open login modal",
+      "closeModal": "Close modal",
+      "copyToClipboard": "Copy to clipboard",
+      "openInExplorer": "Open in explorer",
+      "expand": "Expand",
+      "collapse": "Collapse"
+    },
+    "legal": {
+      "disclaimerGlobal": "Rewards are for illustrating mechanics and rules—no earnings are guaranteed. Actual drops, settlement, and withdrawals follow campaign rules, regional restrictions, and human verification.",
+      "noFinancialAdvice": "Nothing on this site is financial or investment advice.",
+      "tokenUtilityNotice": "BWT is a utility token for in-platform gameplay. It does not represent equity or guaranteed returns.",
+      "voidWhereProhibited": "VOID WHERE PROHIBITED.",
+      "amoeLine": "NO PURCHASE NECESSARY TO ENTER OR WIN. See Official Rules for Alternative Method of Entry (AMOE). VOID WHERE PROHIBITED.",
+      "officialRules": "Official Rules",
+      "termsOfService": "Terms of Service",
+      "privacyPolicy": "Privacy Policy",
+      "riskDisclosure": "Risk Disclosure",
+      "simulatedDisclaimer": "Demo mode: data and effects are simulated for explaining mechanics; not live operational metrics.",
+      "simulatedPartnership": "Simulated sponsor injection effect. Not a real partnership display.",
+      "transparencyLag": "Display may lag due to indexing; the explorer is the source of truth."
+    }
+  },
+  "auth": {
+    "loginModal": {
+      "title": "One‑tap Entry",
+      "subtitle": "Sign in with Email or Google and jump into your first round.",
+      "google": "Continue with Google",
+      "email": "Continue with Email",
+      "note": "We’ll automatically create a secure game account for you.",
+      "agreement": "By continuing, you agree to the Terms of Service and Privacy Policy.",
+      "or": "OR"
+    },
+    "account": {
+      "title": "My Account",
+      "logout": "Log out"
+    }
+  },
+  "game": {
+    "params": {
+      "reviveCostBwt": "{{reviveCostBwt}}",
+      "reviveSeconds": "{{reviveSeconds}}",
+      "reviveMax": "{{reviveMax}}",
+      "ticketCostBwt": "{{ticketCostBwt}}",
+      "dailyFreeRuns": "{{dailyFreeRuns}}",
+      "itemUseLimitEndless": "{{itemUseLimitEndless}}",
+      "reviveLimitEndless": "{{reviveLimitEndless}}",
+      "comboDropMinBwt": "{{comboDropMinBwt}}",
+      "comboDropMaxBwt": "{{comboDropMaxBwt}}",
+      "drawIntervalHours": "{{drawIntervalHours}}",
+      "luckyWinnersCount": "{{luckyWinnersCount}}",
+      "referralPct": "{{referralPct}}",
+      "treasurePoolPct": "{{treasurePoolPct}}",
+      "leaderboardPoolPct": "{{leaderboardPoolPct}}",
+      "burnPct": "{{burnPct}}",
+      "treasuryPct": "{{treasuryPct}}",
+      "itemBurnPct": "{{itemBurnPct}}",
+      "itemTreasuryPct": "{{itemTreasuryPct}}",
+      "largeRewardThresholdBwt": "{{largeRewardThresholdBwt}}",
+      "largeRewardReleaseDays": "{{largeRewardReleaseDays}}",
+      "earlyClaimExtraBurnPct": "{{earlyClaimExtraBurnPct}}"
+    },
+    "mechanics": {
+      "comboDrop": {
+        "title": "5‑in‑a‑Row Bonus",
+        "bodyTemplate": "When you hit a 5‑in‑a‑row combo, you get a random airdrop of {{comboDropMinBwt}}–{{comboDropMaxBwt}} BWT (token).",
+        "note": "High‑value drops may require human verification. Bots don’t settle."
+      },
+      "revive": {
+        "title": "Revive",
+        "bodyTemplate": "Pay {{reviveCostBwt}} BWT to gain +{{reviveSeconds}}s (up to {{reviveMax}} times)."
+      },
+      "ticket": {
+        "title": "Endless Ticket",
+        "bodyTemplate": "First {{dailyFreeRuns}} run(s) per day are free. Then tickets cost {{ticketCostBwt}} BWT."
+      },
+      "items": {
+        "title": "Item Packs",
+        "storyRule": "Unlimited item usage in Story Mode.",
+        "endlessRuleTemplate": "In Endless Mode, each item can be used up to {{itemUseLimitEndless}} times; revive up to {{reviveLimitEndless}} times."
+      },
+      "treasure": {
+        "title": "Treasure Draws",
+        "bodyTemplate": "Each revive purchase gives you 1 Treasure Box. A draw happens every {{drawIntervalHours}} hours.",
+        "payoutTemplate": "50% goes to {{luckyWinnersCount}} random lucky winners; the other 50% is split among remaining box holders in that round."
+      },
+      "rewardRelease": {
+        "title": "Reward Settlement & Release",
+        "smallInstant": "Small rewards: instant (T+0).",
+        "largeLinearTemplate": "Large rewards: default linear release over {{largeRewardReleaseDays}} days for risk control.",
+        "choiceTemplate": "Optional: claim instantly by burning an extra {{earlyClaimExtraBurnPct}}% as a risk-control cost.",
+        "note": "Thresholds and details depend on campaign rules and Official Rules."
+      }
+    },
+    "splits": {
+      "reviveToTreasure": {
+        "titleTemplate": "Revive ({{reviveCostBwt}} BWT) → Treasure Pool",
+        "lineTemplate": "{{treasurePoolPct}}% to Treasure Pool · {{burnPct}}% Burned · {{referralPct}}% Referral · {{treasuryPct}}% Treasury"
+      },
+      "ticketToLeaderboard": {
+        "titleTemplate": "Endless Ticket ({{ticketCostBwt}} BWT) → Leaderboard Pool",
+        "lineTemplate": "{{leaderboardPoolPct}}% to Leaderboard Pool · {{burnPct}}% Burned · {{referralPct}}% Referral · {{treasuryPct}}% Treasury"
+      },
+      "itemsRevenue": {
+        "title": "Item Revenue Split",
+        "lineTemplate": "{{itemBurnPct}}% Burned · {{referralPct}}% Referral · {{itemTreasuryPct}}% Treasury"
+      }
+    }
+  },
+  "footer": {
+    "brandLine": "Web2 makes your time worth zero. Web3 lets your time pay back.",
+    "groups": {
+      "product": "Product",
+      "support": "Support",
+      "business": "Business",
+      "legal": "Legal"
+    },
+    "links": {
+      "play": "Play",
+      "rewards": "Rewards",
+      "leaderboard": "Leaderboard",
+      "invite": "Invite",
+      "transparency": "Transparency",
+      "help": "Help Center",
+      "safety": "Safety & Fairness",
+      "sponsors": "For Sponsors",
+      "investors": "For Investors",
+      "officialRules": "Official Rules (AMOE)",
+      "terms": "Terms of Service",
+      "privacy": "Privacy Policy",
+      "risk": "Risk Disclosure"
+    },
+    "legalLine": "NO PURCHASE NECESSARY TO ENTER OR WIN. See Official Rules (AMOE). VOID WHERE PROHIBITED.",
+    "copyright": "© 2025 BLOCKWORLD. Human-only Arcade."
+  },
+  "home": {
+    "hero": {
+      "pill": "WELCOME TO THE ARCADE",
+      "titleLine1": "Play 60s.",
+      "titleLine2": "Open a Box.",
+      "subtitle": "As easy as a match game. Your time finally pays back—earn BWT (token) and surprise drops.",
+      "helper": "No crypto knowledge required—set up security only when you choose to withdraw.",
+      "cta": {
+        "primary": "Play Now",
+        "secondary": "Watch 60s Demo"
+      },
+      "badges": {
+        "0": "No wallet needed to start",
+        "1": "Human-only rewards",
+        "2": "On-chain transparent"
+      },
+      "boxCard": {
+        "title": "Surprise Box",
+        "subtitle": "USDT / BWT / NFTs",
+        "cta": "Tap to Start",
+        "tag": "Demo"
+      }
+    },
+    "arcadeLive": {
+      "title": "Arcade Live Board",
+      "noteTemplate": "LIVE · Updated: {{time}} · Network: {{network}} (Demo)",
+      "kpi": {
+        "treasurePool": "Treasure Pool",
+        "nextDrawIn": "Next Draw In",
+        "leaderboardPool": "Leaderboard Pool",
+        "burnedToday": "Burned Today",
+        "referralPaidToday": "Referral Paid Today",
+        "treasuryToday": "Treasury Today"
+      },
+      "cta": "Verify on Transparency →",
+      "tooltip": "Demo data for illustrating mechanics. Live metrics will follow on-chain records and reports after launch."
+    },
+    "ticker": {
+      "label": "Live activity",
+      "items": {
+        "0": "Player 0x12…34 just won 500 BWT from a box",
+        "1": "A new campaign pool was injected (simulated)",
+        "2": "Total burned today: 1,203,400 BWT (demo)",
+        "3": "Treasure draw in 08:12 (demo)"
+      },
+      "note": "Activity is simulated to demonstrate cadence and mechanics."
+    },
+    "drops": {
+      "title": "Today’s Drops",
+      "subtitle": "Run into special boxes while you play. Today’s lucky list is here.",
+      "cta": "See rewards →",
+      "empty": "No special campaigns today, but random boxes may still appear in-game."
+    },
+    "aha": {
+      "title": "Open a box. Get a surprise.",
+      "subtitle": "Boxes can appear during play. Rewards come from campaigns and partner drops.",
+      "points": {
+        "0": "No complicated setup",
+        "1": "Human-only rewards",
+        "2": "Withdraw when you’re ready"
+      },
+      "demoTag": "Demo",
+      "demoNote": "Demo for illustration. Rewards follow campaign rules.",
+      "cta": {
+        "play": "Play Now",
+        "watch": "Watch Gameplay"
+      },
+      "verifyLink": "Verify on-chain →",
+      "simulatedPartnershipNote": "Simulated sponsor injection effect. Not a real partnership display."
+    },
+    "modes": {
+      "title": "Two Modes. Two Kinds of Fun.",
+      "story": {
+        "title": "Story Mode",
+        "descTemplate": "Time’s up? Optionally pay {{reviveCostBwt}} BWT to revive +{{reviveSeconds}}s (up to {{reviveMax}} times).",
+        "note": "Unlimited item usage in Story Mode.",
+        "cta": "Play Story"
+      },
+      "endless": {
+        "title": "Endless Mode",
+        "descTemplate": "First run each day is free. Then tickets cost {{ticketCostBwt}} BWT.",
+        "noteTemplate": "In Endless Mode, each item can be used up to {{itemUseLimitEndless}} times; revive up to {{reviveLimitEndless}} times.",
+        "cta": "Climb the Board"
+      }
+    },
+    "comboDrop": {
+      "title": "5‑in‑a‑Row = BWT Drop!",
+      "bodyTemplate": "When you hit a 5‑in‑a‑row combo, you get a random airdrop of {{comboDropMinBwt}}–{{comboDropMaxBwt}} BWT (token).",
+      "note": "High‑value drops may require human verification. Bots don’t settle."
+    },
+    "treasure": {
+      "title": "Revive isn’t just “continue”—it also gives you a Treasure Box",
+      "bodyTemplate": "Each revive purchase gives you 1 Treasure Box. A draw happens every {{drawIntervalHours}} hours.",
+      "payoutTemplate": "50% goes to {{luckyWinnersCount}} random lucky winners; the other 50% is split among remaining box holders in that round.",
+      "cta": {
+        "thisRound": "See this round →",
+        "lastWinners": "See last winners →"
+      }
+    },
+    "inviteCard": {
+      "title": "Invite friends. Play together. Earn together.",
+      "bodyTemplate": "One level only: {{referralPct}}% of your friends’ spending comes back to you (settled after human verification).",
+      "cta": {
+        "copy": "Copy invite link",
+        "view": "View my rewards"
+      }
+    },
+    "migrationPack": {
+      "title": "On-chain Welcome Pack (Campaign)",
+      "subtitle": "Your on-chain footprint deserves respect. Complete human verification and claim a welcome box.",
+      "note": "Eligibility, regional restrictions, and reward rules follow the campaign page and Official Rules.",
+      "cta": {
+        "learn": "See campaign rules →",
+        "play": "Play Now"
+      }
+    },
+    "safety": {
+      "title": "A park for real players",
+      "subtitle": "Human checks protect fair play: bots don’t get paid, real players don’t lose their chance.",
+      "cards": {
+        "0": {
+          "title": "Human‑only rewards",
+          "body": "Bots and scripted patterns don’t settle."
+        },
+        "1": {
+          "title": "Stricter for high value",
+          "body": "The bigger the drop, the stricter the checks."
+        },
+        "2": {
+          "title": "On‑chain transparent",
+          "body": "Pools/burn/referral/treasury are visible in real time."
+        }
+      },
+      "cta": "Learn about safety →"
+    },
+    "faq": {
+      "title": "Quick Questions",
+      "subtitle": "Everything you need before your first round.",
+      "cta": "See all FAQs →",
+      "items": {
+        "0": {
+          "q": "Can I really withdraw?",
+          "a": "Yes. Withdrawal methods and limits follow campaign rules, regional restrictions, and human verification."
+        },
+        "1": {
+          "q": "Do I need a wallet?",
+          "a": "No. Start like a normal game—set up security only when you withdraw."
+        },
+        "2": {
+          "q": "Why didn’t I get a box?",
+          "a": "Boxes aren’t guaranteed every round; it depends on campaign inventory, probability, and risk controls."
+        },
+        "3": {
+          "q": "What is BWT?",
+          "a": "BWT is the platform utility token used for revives, tickets, items, and campaign perks."
+        },
+        "4": {
+          "q": "How do Treasure draws work?",
+          "a": "Every 2 hours: 50% to 100 random winners, 50% split among remaining holders in that round."
+        },
+        "5": {
+          "q": "How does referral work?",
+          "a": "One level only; settled after human verification."
+        }
+      }
+    }
+  },
+  "rewards": {
+    "header": {
+      "title": "Rewards",
+      "subtitle": "Your hub for rewards, pools, and rules.",
+      "cta": {
+        "play": "Play Now",
+        "verify": "Verify on Transparency"
+      }
+    },
+    "types": {
+      "title": "Reward Types",
+      "cards": {
+        "0": {
+          "title": "BWT (Token)",
+          "body": "Used for revives, tickets, items, and perks."
+        },
+        "1": {
+          "title": "Stable Rewards (e.g., USDT)",
+          "body": "Straightforward rewards, withdrawable under campaign rules."
+        },
+        "2": {
+          "title": "Campaign / Partner Drops",
+          "body": "Powered by exchanges, L1/L2, DeFi and other campaign budgets."
+        }
+      }
+    },
+    "progress": {
+      "title": "Progress Rewards",
+      "subtitle": "Level up to unlock surprises.",
+      "note": "Rewards depend on campaign inventory and rules; some require human verification to settle.",
+      "status": {
+        "claim": "Claim",
+        "claimed": "Claimed",
+        "locked": "Locked"
+      }
+    },
+    "splits": {
+      "title": "Pools & Splits",
+      "subtitle": "All flows are transparent and verifiable on-chain with real-time visualizations.",
+      "rows": {
+        "revive": {
+          "titleTemplate": "Revive ({{reviveCostBwt}} BWT) → Treasure Pool",
+          "lineTemplate": "{{treasurePoolPct}}% to Treasure Pool · {{burnPct}}% Burned · {{referralPct}}% Referral · {{treasuryPct}}% Treasury"
+        },
+        "ticket": {
+          "titleTemplate": "Endless Ticket ({{ticketCostBwt}} BWT) → Leaderboard Pool",
+          "lineTemplate": "{{leaderboardPoolPct}}% to Leaderboard Pool · {{burnPct}}% Burned · {{referralPct}}% Referral · {{treasuryPct}}% Treasury"
+        },
+        "items": {
+          "title": "Item Revenue Split",
+          "lineTemplate": "{{itemBurnPct}}% Burned · {{referralPct}}% Referral · {{itemTreasuryPct}}% Treasury"
+        }
+      },
+      "cta": "Verify on Transparency →"
+    },
+    "rewardRelease": {
+      "title": "Reward Settlement & Release",
+      "subtitle": "For fairness and risk control: instant for small, linear for large—plus an instant-claim option.",
+      "smallInstant": "Small rewards: instant (T+0).",
+      "largeLinearTemplate": "Large rewards: default linear release over {{largeRewardReleaseDays}} days.",
+      "choiceTemplate": "Instant claim: optional, burns an extra {{earlyClaimExtraBurnPct}}% as a risk-control cost.",
+      "note": "Thresholds and details follow campaign pages and Official Rules."
+    },
+    "sponsorBox": {
+      "title": "Sponsor Box: Surprise Gacha Drops",
+      "p1": "Partners load campaign budgets into the drop pool. You may run into them during play.",
+      "p2": "You get rewards; partners get new users who complete onboarding and education.",
+      "cta": "See today’s drops →",
+      "simulatedNote": "Demo display: partner examples and injection effects are simulated."
+    }
+  },
+  "leaderboard": {
+    "header": {
+      "title": "Endless Leaderboard",
+      "subtitleTemplate": "First run daily is free. Then tickets cost {{ticketCostBwt}} BWT. Climb to win the pool.",
+      "endsInTemplate": "Ends in: {{time}}",
+      "cta": {
+        "startFree": "Start Endless (Free today)",
+        "buyTicketTemplate": "Buy Ticket ({{ticketCostBwt}} BWT)"
+      }
+    },
+    "pool": {
+      "title": "Current Pool",
+      "splitLineTemplate": "Ticket split: {{leaderboardPoolPct}}% pool · {{burnPct}}% burn · {{referralPct}}% referral · {{treasuryPct}}% treasury",
+      "cta": "Verify on Transparency →"
+    },
+    "myStatus": {
+      "loggedInTemplate": "My Rank: #{{rank}} · My Score: {{score}} · Est. Reward: {{reward}}",
+      "loggedOut": "Log in to see your rank and estimated rewards.",
+      "verifyBadge": "Verified"
+    },
+    "table": {
+      "title": "Top 100",
+      "columns": {
+        "rank": "Rank",
+        "player": "Player",
+        "score": "Score",
+        "estReward": "Est. Reward"
+      },
+      "note": "Estimated rewards are illustrative; final settlement follows pool size and rules.",
+      "cta": "View Top 100 →"
+    },
+    "share": {
+      "title": "Share your run—and earn from referrals",
+      "bodyTemplate": "Invite friends to climb with you—earn {{referralPct}}% of their spend (one level).",
+      "cta": {
+        "share": "Share",
+        "copy": "Copy invite link"
+      }
+    }
+  },
+  "invite": {
+    "header": {
+      "title": "Invite & Earn",
+      "subtitleTemplate": "One level only: {{referralPct}}% of your friends’ spending comes back to you (settled after human verification)."
+    },
+    "stats": {
+      "title": "My Stats",
+      "metrics": {
+        "invites": "Invites",
+        "pending": "Pending",
+        "claimable": "Claimable",
+        "lifetime": "Lifetime"
+      },
+      "cta": {
+        "withdraw": "Withdraw"
+      },
+      "note": "Settlement requires human verification. Bots don’t settle."
+    },
+    "share": {
+      "title": "Copy link, share in 1 tap",
+      "subtitle": "Once friends sign up and play, you earn automatically.",
+      "cta": {
+        "copy": "Copy invite link",
+        "poster": "Generate poster"
+      },
+      "toastCopied": "Copied! Send it to a friend."
+    },
+    "rules": {
+      "title": "Rules",
+      "items": {
+        "0": "One level only.",
+        "1": "Source: splits from BWT spending (revives/tickets/items).",
+        "2": "Settlement: after human verification."
+      }
+    },
+    "onChain": {
+      "cta": "View on-chain payouts →",
+      "note": "Display may lag due to indexing; the explorer is the source of truth."
+    },
+    "title": "Invite & Earn 10%",
+    "subtitle": "Earn 10% BWT from every friend's spend on revives, tickets, and items (Level 1 only).",
+    "cta": "Get My Invite Link",
+    "note": "Rewards settled after human verification; bots/abuse will not be rewarded."
+  },
+  "transparency": {
+    "header": {
+      "title": "Transparency",
+      "subtitle": "Pools, burn, referral, and treasury—on‑chain and verifiable.",
+      "statusTemplate": "LIVE · Updated: {{time}} · Network: {{network}}",
+      "demoNote": "Demo mode: simulated data and effects for explaining mechanics; not live operational metrics."
+    },
+    "kpi": {
+      "treasurePool": "Treasure Pool",
+      "leaderboardPool": "Leaderboard Pool",
+      "burnedToday": "Burned Today",
+      "referralToday": "Referral Today",
+      "treasuryToday": "Treasury Today",
+      "totalBurned": "Total Burned",
+      "totalPayout": "Total Payout"
+    },
+    "flow": {
+      "title": "Live Token Flow",
+      "source": {
+        "title": "User Spend",
+        "subtitle": "Tickets / Revives / Items"
+      },
+      "segments": {
+        "pool": "Pool",
+        "burn": "Burn",
+        "referral": "Referral",
+        "treasury": "Treasury"
+      },
+      "note": "All flows are public and verifiable on-chain. Validate line-by-line via the transaction feed."
+    },
+    "addresses": {
+      "title": "Public Addresses (Example)",
+      "subtitle": "Addresses below demonstrate the verification entry. Official addresses will be published upon launch.",
+      "rows": {
+        "treasurePool": "Treasure Pool address",
+        "leaderboardPool": "Leaderboard Pool address",
+        "burn": "Burn (blackhole) address",
+        "referral": "Referral distributor address",
+        "treasury": "Treasury address"
+      },
+      "cta": "Open in explorer →"
+    },
+    "tx": {
+      "title": "Recent Transactions",
+      "tabs": {
+        "all": "All",
+        "treasure": "Treasure",
+        "leaderboard": "Leaderboard",
+        "referral": "Referral",
+        "burn": "Burn",
+        "treasury": "Treasury"
+      },
+      "table": {
+        "type": "Type",
+        "amount": "Amount",
+        "time": "Time",
+        "tx": "Tx"
+      },
+      "empty": "No records yet. Check back soon.",
+      "note": "Display may lag due to indexing; the explorer is the source of truth."
+    },
+    "verifyHow": {
+      "title": "How to verify it’s real",
+      "steps": {
+        "0": "Open a Tx",
+        "1": "Check amount and addresses on explorer",
+        "2": "Match pool/burn/referral/treasury addresses"
+      },
+      "cta": "Learn more →"
+    }
+  },
+  "help": {
+    "title": "Help Center",
+    "subtitle": "Rules, withdrawals, safety, and verification—explained.",
+    "toc": {
+      "rewards": "Rewards",
+      "items": "Item Packs",
+      "referral": "Referral",
+      "transparency": "Transparency",
+      "safety": "Safety & Fairness",
+      "faq": "FAQ",
+      "quickStart": "Quick Start",
+      "treasure": "Treasure Box",
+      "leaderboard": "Leaderboard",
+      "welcome": "Welcome",
+      "withdraw": "Withdrawals",
+      "modes": "Game Modes",
+      "officialRules": "Official Rules",
+      "bwt": "About BWT"
+    },
+    "sections": {
+      "rewards": {
+        "title": "Rewards Overview",
+        "body": "# Rewards Overview\n\nBLOCKWORLD’s rewards are composed of: **gameplay airdrops, boxes, pools, and sponsor campaigns**.\n\n## 1) 5-combo airdrop (BlockRush)\n\nWhen you trigger a **5-combo** in match-3:\n\n- Airdrop amount: **5–100 BWT (random)**\n- No fixed guarantee per run\n\n## 2) Mystery Box\n\n- Randomly appears during gameplay.\n- May contain **BWT / USDT / NFTs / sponsor tokens / event rewards** (campaign-dependent).\n- The Mystery Box is designed to create a strong “dopamine moment” for first-time users.\n\n## 3) Treasure Box\n\n- Every **BWT revive** grants **one Treasure Box entry**.\n- Treasure draws happen every **2 hours** (see Treasure Box page).\n\n## 4) Leaderboard Pool\n\n- Part of Endless ticket revenue is routed into the leaderboard prize pool.\n- Distribution depends on the current leaderboard rules (see Leaderboard page).\n\n## Where do rewards come from?\n\nTypically from a combination of:\n\n- user-spend pools (Treasure Pool, Leaderboard Pool),\n- sponsor budgets (projects, exchanges, brands),\n- platform campaign budgets.\n\n> Reminder: rewards are promotional and subject to risk controls, eligibility checks, and regional restrictions. Key flows are verifiable via the Transparency Dashboard."
+      },
+      "items": {
+        "title": "Item Packs",
+        "body": "# Item Packs\n\nItem packs enhance gameplay in both Story and Endless modes.\n\n## Where can I use items?\n\n- Story Mode: allowed\n- Endless Mode: allowed\n\n## Usage caps\n\n- Story Mode: typically unlimited (as shown in-app)\n- Endless Mode: each item type up to **5 uses per run**\n\n## Item pack revenue split\n\n- **50%** -> **Burn**\n- **40%** -> **Treasury**\n- **10%** -> **Referral**"
+      },
+      "referral": {
+        "title": "Referral 10%",
+        "body": "# Referral 10%\n\nReferral is one of our core growth loops. We keep it simple: **one level only**.\n\n## Rate\n\n- **10% one-level referral**\n\n## What spend is covered?\n\nv1.0 typically covers:\n\n- revives,\n- Endless tickets,\n- item pack purchases,\n\nsubject to campaign rules.\n\n## Settlement\n\n- Referrals appear in your dashboard as daily and cumulative amounts.\n- On-chain payout visibility will be shown when enabled.\n\n## Anti-fraud\n\nAbnormal behavior (bots, self-referrals, account clusters) may lead to:\n\n- delayed settlement,\n- cancellation of referral rewards.\n\nSee [Safety & Fairness](./safety.md)."
+      },
+      "transparency": {
+        "title": "Transparency Dashboard",
+        "body": "# Transparency Dashboard\n\nTransparency is the trust layer of BLOCKWORLD:  \nplayers verify fairness, sponsors verify delivery, investors verify diligence.\n\n## What you can see\n\nTypical modules (as shown on the website/app):\n\n- Burned Today\n- Treasure Pool\n- Referral Paid Today\n- Treasury\n\nPlus:\n\n- Live Token Flow (User Spend -> Pool/Burn/Referral/Treasury)\n- Recent Transactions (Tx Feed)\n\n## v1.0 split recap\n\n- Revive (10 BWT): 50% Pool / 30% Burn / 10% Referral / 10% Treasury  \n- Endless Ticket (20 BWT): 50% Pool / 30% Burn / 10% Referral / 10% Treasury  \n- Item Packs: 50% Burn / 10% Referral / 40% Treasury  \n\nIf anything differs on the site, the latest in-app rules prevail."
+      },
+      "safety": {
+        "title": "Safety & Fairness",
+        "body": "# Safety & Fairness\n\nTo ensure real players are rewarded, we continuously fight bots and farming.\n\n## Proof-of-Human\n\nWe may use a combination of:\n\n- behavioral signals and input patterns,\n- Verified Run (log replay),\n- device/account risk signals.\n\n## What can trigger risk controls?\n\n- mass signups or device switching,\n- unusually high-frequency claims or spending,\n- obvious scripted behavior,\n- referral abuse.\n\n## Settlement strategy\n\nWe may apply:\n\n- delayed settlement for review,\n- linear vesting for large rewards,\n- disqualification or clawback for confirmed abuse.\n\n## Appeals\n\nIf you believe you were incorrectly flagged, submit an appeal via the official support channel (TBD)."
+      },
+      "faq": {
+        "title": "FAQ",
+        "body": "# FAQ\n\n## Can I withdraw?\nWhether withdrawals are enabled, thresholds, and fees depend on the current product version and region. When enabled, you’ll see your withdrawable balance and on-chain records in your dashboard.\n\n## Do I need a wallet?\nNo. You can start with Google/email. If you withdraw or join deeper on-chain campaigns, the product will guide you.\n\n## Where do rewards come from?\nA combination of user-spend pools, sponsor budgets, and platform campaign budgets, with key flows intended to be verifiable on-chain.\n\n## Why didn’t I get a Mystery Box?\nMystery Boxes are random and campaign-dependent. Check “Today’s Drops” or campaign announcements.\n\n## How is referral calculated?\n10% one-level on eligible spend (revive/ticket/items). Risk controls can delay or cancel referral payouts.\n\n## How do Treasure draws work?\nEvery 2 hours: 50% to a random Lucky 100, 50% shared among remaining holders.\n\n## How can I verify the splits?\nUse the Transparency Dashboard and Tx feed, and check the corresponding on-chain transactions."
+      },
+      "quickStart": {
+        "title": "Quick Start",
+        "body": "# Quick Start\n\nGoal: **you don’t need to understand Web3 to start**.  \nExperience the “aha moment” first, learn wallets and on-chain verification later.\n\n## Step 1: One-click login\n\n- Sign in with **Google / Email** (as shown on the site/app).\n- We automatically create your **BW-ID account** to track rewards, referral relationships, and security checks.\n\n## Step 2: Play 60 seconds (BlockRush)\n\n- Our first game is **BlockRush (match-3)**.\n- Each run lasts ~60 seconds.\n- When you trigger a **5-combo**, you receive a random airdrop of **5–100 BWT**.\n\n## Step 3: Open boxes\n\nYou may encounter two different “boxes”:\n\n1) **Mystery Box**  \n- Randomly appears during gameplay.  \n- May contain **BWT / USDT / NFTs / sponsor tokens / event rewards** (campaign-dependent).\n\n2) **Treasure Box**  \n- Every time you **revive using BWT**, you receive **one Treasure Box entry**.  \n- Treasure draws happen every **2 hours** (see Treasure Box page).\n\n## Next steps (to increase consistency)\n\n- Get your referral link on the [Referral](./referral.md) page (10% one-level).\n- Learn how to verify pools/burn/treasury via the [Transparency](./transparency.md) dashboard.\n- Want competition? Read [Leaderboard & Tickets](./leaderboard.md)."
+      },
+      "treasure": {
+        "title": "Treasure Box (2-hour draws)",
+        "body": "# Treasure Box (2-hour draws)\n\nTreasure Box is our core “emotion layer”: it turns revives from pure spend into a participation right — with fully transparent token flow.\n\n## How do I get a Treasure Box?\n\n- Every time you **revive using BWT**, you receive **1 Treasure Box entry**.\n\n## Revive split (10 BWT)\n\nFor each **10 BWT** revive:\n\n- **50%** -> **Treasure Pool**\n- **30%** -> **Burn** (black hole address)\n- **10%** -> **Referral** (one-level)\n- **10%** -> **Treasury**\n\nAll splits are intended to be visible on-chain and visualized on the Transparency Dashboard.\n\n## Draw schedule\n\n- **One draw every 2 hours**.\n\n## Distribution per round\n\nLet the pool for the round be `P` (BWT):\n\n1) **Lucky 100**  \n- **50% (0.5P)** is distributed to **100 randomly selected** players.\n\n2) **Holder Share**  \n- The remaining **50% (0.5P)** is split equally among all other Treasure Box holders in that round.\n\n## Risk controls and settlement\n\nFor fairness and security:\n\n- suspicious accounts may be delayed or disqualified,\n- large rewards may be subject to delayed settlement or linear vesting (as defined in Official Rules)."
+      },
+      "leaderboard": {
+        "title": "Leaderboard & Endless Tickets",
+        "body": "# Leaderboard & Endless Tickets\n\nEndless Mode is designed for competition. Ticket spend contributes to the leaderboard prize pool and is verifiable on-chain.\n\n## Ticket rules\n\n- First Endless entry is **free daily**.\n- Additional entries cost **20 BWT** per ticket.\n\n## Limits (per run)\n\n- Up to **5 revives**\n- Each item type up to **5 uses**\n\n## Ticket split (20 BWT)\n\n- **50%** -> **Leaderboard Pool**\n- **30%** -> **Burn**\n- **10%** -> **Referral**\n- **10%** -> **Treasury**\n\n## Prize distribution\n\nExact payout rules (Top N, tiers, ratios) depend on the current leaderboard configuration shown on the leaderboard page.\n\n> Reminder: leaderboard rewards are subject to eligibility and risk controls."
+      },
+      "welcome": {
+        "title": "BLOCKWORLD Help Center",
+        "body": "# BLOCKWORLD Help Center\n\nWelcome to BLOCKWORLD. This is the single source for getting started, understanding rewards, verifying on-chain flows, and reading our safety & fairness rules.\n\n## What you’ll find here\n\n- **Quick Start**: start playing in 60 seconds.\n- **Modes**: Story Mode / Endless Mode / Leaderboard.\n- **Rewards & Drops**: BWT, Mystery Boxes, event drops, Treasure Boxes.\n- **Referral**: 10% one-level referral rewards.\n- **Transparency Dashboard**: on-chain, verifiable BWT flows.\n- **Withdrawals & Account Safety**: process and security notes (placeholder).\n- **Safety & Fairness**: Proof-of-Human, anti-bot, delayed settlement.\n- **Official Rules**: compliance and AMOE placeholder.\n\n## Quick Links\n\n- [Quick Start](./quick-start.md)\n- [Game Modes](./game-modes.md)\n- [Rewards Overview](./rewards.md)\n- [About BWT](./bwt.md)\n- [Treasure Box (2-hour draws)](./treasure-box.md)\n- [Referral 10%](./referral.md)\n- [Leaderboard & Endless Tickets](./leaderboard.md)\n- [Item Packs](./items.md)\n- [Transparency & Tx Feed](./transparency.md)\n- [Withdrawals (placeholder)](./withdrawals.md)\n- [Safety & Fairness](./safety.md)\n- [FAQ](./faq.md)\n- [Official Rules (placeholder)](./official-rules.md)\n\n## Key Terms\n\n- **BWT**: the BLOCKWORLD Token used for in-game sinks (revives, tickets, item packs) and reward settlement.\n- **Mystery Box**: an in-game random box that may contain BWT, sponsor rewards, or event drops.\n- **Treasure Box**: an entry you receive when you revive using BWT. Draws happen every 2 hours.\n- **Transparency Dashboard**: a real-time / near-real-time view of on-chain flows (pools, burn, referral, treasury) plus a Tx feed you can verify.\n\n> Important: This Help Center explains gameplay and promotional rules. It is not financial advice and not a promise of profit. The latest in-app rules always prevail."
+      },
+      "withdraw": {
+        "title": "Withdrawals & Account Safety",
+        "body": "# Withdrawals & Account Safety\n\n> Note: withdrawal thresholds and requirements may change depending on regional compliance and risk controls. The latest in-app display prevails.\n\n## Where is the withdraw button?\n\nMy Dashboard -> **Withdraw**\n\n## What steps might be required?\n\n- basic account verification (TBD),\n- Proof-of-Human or risk review for suspicious accounts,\n- confirming a receiving address.\n\n## Why can withdrawals be delayed?\n\n- chain congestion,\n- risk review,\n- campaign settlement window not finished.\n\n## Security tips\n\n- never share verification codes, private keys, or seed phrases,\n- beware of phishing links and fake support,\n- only use official website/app entry points."
+      },
+      "modes": {
+        "title": "Game Modes",
+        "body": "# Game Modes\n\nBLOCKWORLD currently offers **Story Mode** and **Endless Mode**. They share the same token economy but have different limits.\n\n## Story Mode\n\nDesigned for learning and casual progression.\n\n- **Revive**: when time runs out, you may pay **10 BWT** to revive and gain **+30 seconds**.\n- **Item packs**: usable in Story Mode.\n- **Item usage**: typically **unlimited** in Story Mode (as shown in-app).\n- **Risk controls**: for fairness, the system may enforce reasonable per-run limits or trigger review for abnormal behavior.\n\n## Endless Mode\n\nDesigned for competition and leaderboard play.\n\n- **First run free daily**.\n- Additional runs on the same day require a **20 BWT ticket**.\n- **Revive limit**: up to **5 revives** per run.\n- **Item limit**: each item type up to **5 uses** per run.\n\n## Why casual games first?\n\nWe intentionally start with low-barrier casual gameplay to:\n\n- bring in **Web2-scale** players,\n- avoid forcing wallets / chain concepts upfront,\n- create trust through **rewards + transparency + fairness** within 60 seconds,\n- then complete education through withdrawal flows and on-chain verification.\n\n## Content roadmap\n\nWe plan to **launch 1 game and tease 1 next game** (e.g., BlockRush now, a shooter game next) to reduce single-game lifecycle risk and accumulate core assets at the platform layer."
+      },
+      "officialRules": {
+        "title": "Official Rules (Placeholder)",
+        "body": "# Official Rules (Placeholder)\n\n> Important: This is a structure placeholder for diligence and site completeness. A legal review is required before public launch.\n\n## 1. Definitions\n\n- “BWT” is the BLOCKWORLD Token.\n- “Mystery Box” is an in-game random reward box.\n- “Treasure Box” is an entry granted by a BWT revive.\n- “Treasure Pool / Leaderboard Pool” are the corresponding pools.\n\n## 2. Eligibility\n\n- age requirement (TBD)\n- regional restrictions: VOID WHERE PROHIBITED\n- anti-fraud: bots and abusive behavior may be disqualified\n\n## 3. How to Enter\n\n### 3.1 Standard Method\n- participation via in-game actions (e.g., revives grant Treasure entries)\n\n### 3.2 AMOE — Alternative Method of Entry (TBD)\n- **NO PURCHASE NECESSARY TO ENTER OR WIN.**\n- AMOE definition and method (TBD): e.g., a daily Verified Run entry, a free task entry, etc.\n- submission window, eligibility, and limits (TBD)\n\n## 4. Prize & Distribution\n\n- Treasure draw frequency: every 2 hours (TBD)\n- distribution: 50% Lucky 100 + 50% Holder Share (as shown on the site)\n- leaderboard pool distribution (TBD)\n\n## 5. Verification & Fraud\n\n- Proof-of-Human / Verified Run (TBD)\n- delayed settlement, disqualification, and clawback\n\n## 6. Taxes & Fees (TBD)\n\n## 7. Disclaimers\n\n- promotional rewards; not financial advice; no guarantee of profit\n- token volatility risk\n- rules may change with notice\n\n## 8. Contact (TBD)"
+      },
+      "bwt": {
+        "title": "About BWT",
+        "body": "# About BWT\n\n**BWT = the BLOCKWORLD Token.**  \nIt is the unified unit for sinks, rewards, burn, referrals, and treasury — designed to be transparent and verifiable.\n\n## What can I use BWT for?\n\n### 1) Revive\n- Pay **10 BWT** to revive and gain **+30 seconds** (as shown in-app).\n- Revive grants a Treasure Box entry and routes part of the spend into Treasure Pool/burn/referral/treasury.\n\n### 2) Endless Ticket\n- First Endless run is free daily.\n- Additional entries cost **20 BWT** per ticket.\n\n### 3) Item Packs\n- Item packs can be used in both modes.\n- In Endless Mode: each item type is capped at **5 uses per run**.\n- Item pack revenue is partially burned.\n\n## How do I earn BWT?\n\nCommon ways:\n\n- 5-combo airdrops (5–100 BWT)\n- Mystery Boxes (campaign drops)\n- Treasure draws\n- Leaderboard settlement\n- quests/tasks (if enabled)\n\n## Why on-chain transparency?\n\nTransparency reduces trust friction:\n\n- players can verify pools and burns,\n- sponsors can audit delivery,\n- investors can perform diligence.\n\nSee [Transparency](./transparency.md)."
+      }
+    },
+    "description": "Guides, rules, and support."
+  },
+  "sponsors": {
+    "hero": {
+      "title": "Turn your marketing budget into real player rewards",
+      "subtitle": "Human‑only · Measurable · On‑chain verifiable.",
+      "cta": {
+        "kit": "Get Sponsor Kit (PDF)",
+        "call": "Book a call"
+      }
+    },
+    "why": {
+      "title": "What you get",
+      "items": {
+        "0": "New users who complete onboarding and education",
+        "1": "Controlled brand exposure (without breaking gameplay)",
+        "2": "Auditable reporting (field dictionary + on‑chain proofs)"
+      }
+    },
+    "placements": {
+      "title": "Placements",
+      "items": {
+        "0": "In‑game Sponsor Box",
+        "1": "Today’s Drops marquee",
+        "2": "Pool Sponsorship (Treasure / Leaderboard)",
+        "3": "Rewards feature card"
+      },
+      "note": "Inventory and schedule follow the Sponsor Kit."
+    },
+    "guarantee": {
+      "title": "Our Guarantee: You Only Pay for Humans",
+      "body": "We use Proof-of-Human to validate verified human engagement. If the invalid rate exceeds the agreed threshold, we provide make‑goods or credits under SLA, with a full review completed within 7 business days."
+    },
+    "measurement": {
+      "title": "How we measure",
+      "body": "We measure with verified human engagement + key conversion events, with verifiable on‑chain proofs."
+    },
+    "contact": {
+      "title": "Contact BD",
+      "body": "Contact via email/Telegram (add your channels)."
+    }
+  },
+  "investors": {
+    "hero": {
+      "title": "BLOCKWORLD: The Mass Adoption Protocol for Web3",
+      "subtitle": "A casual‑game gateway turning billions of Web2 players into Web3 citizens—without friction.",
+      "cta": {
+        "kit": "Download Investor Kit (Deck + Memo)",
+        "call": "Book a call"
+      }
+    },
+    "thesis": {
+      "title": "The thesis",
+      "points": {
+        "0": "Web3 growth is expensive and often zero‑sum.",
+        "1": "Casual players are the biggest untapped on‑ramp.",
+        "2": "We convert via play → box → withdraw‑as‑education → on‑chain transparency."
+      }
+    },
+    "moat": {
+      "title": "Moat",
+      "items": {
+        "0": "BW‑ID account system (frictionless onboarding)",
+        "1": "Sponsor Engine (distribution protocol)",
+        "2": "Proof-of-Human (human verification layer)",
+        "3": "On‑chain Transparency (verifiable flows)"
+      }
+    },
+    "team": {
+      "title": "Founder–Market Fit",
+      "subtitle": "Proof through verified experience and output: we understand games, ads, and on-chain risk control.",
+      "roles": {
+        "0": {
+          "title": "Gaming DNA",
+          "body": "Casual retention and economy design: level pacing, dopamine moments, anti-cheat, and long-term content iteration."
+        },
+        "1": {
+          "title": "AdTech DNA",
+          "body": "Ad delivery and measurement: SLA, field dictionary, invalid traffic governance, and optimization loops."
+        },
+        "2": {
+          "title": "Crypto Native",
+          "body": "Security and risk control: transparent flows, parameterized governance, anti-arbitrage, and incident handling."
+        }
+      },
+      "note": "Team and advisors are detailed in the Investor Kit."
+    },
+    "roadmap": {
+      "title": "Roadmap",
+      "body": "Launch 1 game (Block Rush) + tease next (shooter); expand game matrix and sponsor network."
+    },
+    "riskControl": {
+      "title": "Risk control",
+      "items": {
+        "0": "Large reward linear release + optional instant claim (extra burn)",
+        "1": "Proof-of-Human to protect real players and sponsor budgets",
+        "2": "On-chain transparency with verifiable transaction proofs"
+      }
+    },
+    "contact": {
+      "title": "Investor contact",
+      "body": "Contact via investor email/Telegram (add your channels)."
+    }
+  },
+  "legal": {
+    "header": {
+      "title": "Rules & Policies",
+      "subtitle": "Official Rules (AMOE), Terms of Service, Privacy Policy, and risk disclosures."
+    },
+    "pages": {
+      "officialRules": {
+        "title": "Official Rules (AMOE)",
+        "body": "NO PURCHASE NECESSARY and related requirements vary by jurisdiction. This page is an entry point; each campaign will publish its own Official Rules with participation details."
+      },
+      "terms": {
+        "title": "Terms of Service",
+        "body": "Entry point for Terms of Service. Covers account usage, user conduct, limitations of liability, and more."
+      },
+      "privacy": {
+        "title": "Privacy Policy",
+        "body": "Entry point for Privacy Policy. Explains data collection, usage, storage, and user rights."
+      },
+      "risk": {
+        "title": "Risk Disclosure",
+        "body": "Tokens, campaign rewards, and network interactions carry risks. Participate only after understanding rules and regional restrictions."
+      }
+    }
+  },
+  "withdraw": {
+    "title": "Withdraw",
+    "balance": "Current Balance",
+    "amount": "Amount",
+    "method": "Method",
+    "max": "MAX",
+    "submit": "Submit Request",
+    "note": "Withdrawals are subject to Proof-of-Human verification. Large rewards may be vested.",
+    "verify": "View On-Chain"
+  },
+  "aha": {
+    "treasureReferral": "Treasure & Referral"
+  },
+  "treasure": {
+    "title": "Treasure Draw (Every 2 Hours)",
+    "subtitle": "Get 1 Treasure Box per revive. Next draw in:",
+    "winners": "Last Winners",
+    "cta": "View Current Pool"
+  },
+  "chips": {
+    "treasurePool": "Treasure Pool"
+  },
+  "steps": {
+    "title": "Start in 3 Steps",
+    "subtitle": "No crypto knowledge needed. Just fun.",
+    "s1Title": "One-Tap Login",
+    "s1Body": "Sign in with Google or Email. Secure account created automatically.",
+    "s2Title": "Play 60s",
+    "s2Body": "Fast-paced match-3 with juicy effects.",
+    "s3Title": "Open Boxes",
+    "s3Body": "Find random boxes and win rewards."
+  }
 }

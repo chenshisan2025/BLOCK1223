@@ -63,13 +63,18 @@ export const Navbar: React.FC = () => {
           >
             {t('nav.leaderboard')}
           </Link>
+          <Link
+            to="/help"
+            className={clsx(
+              "px-4 py-2 rounded-full hover:bg-white hover:text-purple-600 transition-all",
+              isActive('/help') && "active-nav"
+            )}
+          >
+            {t('nav.help')}
+          </Link>
         </div>
 
         <div className="flex items-center gap-3">
-          <div className="hidden lg:flex gap-3 text-sm text-subtext font-medium mr-2">
-            <a href="#safety" className="hover:text-purple-600">{t('nav.safety')}</a>
-            <a href="#faq" className="hover:text-purple-600">{t('nav.help')}</a>
-          </div>
           <button
             onClick={toggleLanguage}
             className="w-10 h-10 rounded-full bg-white border border-purple-100 text-subtext hover:text-purple-600 flex items-center justify-center transition-colors font-bold text-xs"
@@ -86,7 +91,7 @@ export const Navbar: React.FC = () => {
             onClick={() => setIsLoginOpen(true)}
             className="hidden md:block px-5 py-2 rounded-full bg-white border border-purple-100 text-purple-600 font-semibold shadow-sm hover:bg-purple-50 hover:scale-105 active:scale-95 transition-all text-sm"
           >
-            {t('nav.login')}
+            {t('auth.loginModal.title')}
           </button>
           <button 
             onClick={() => setIsMobileMenuOpen(true)}

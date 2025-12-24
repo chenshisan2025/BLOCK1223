@@ -47,20 +47,9 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, onLogin
           {t('nav.invite')}
         </button>
         
-        <a 
-          href="#safety" 
-          onClick={onClose}
-          className="text-subtext font-medium text-lg mt-4 hover:text-purple-600 transition-colors"
-        >
-          {t('nav.safety')}
-        </a>
-        <a 
-          href="#faq" 
-          onClick={onClose}
-          className="text-subtext font-medium text-lg hover:text-purple-600 transition-colors"
-        >
+        <button onClick={() => handleNavigation('/help')} className="hover:text-purple-600 transition-colors">
           {t('nav.help')}
-        </a>
+        </button>
       </div>
       
       <Button 

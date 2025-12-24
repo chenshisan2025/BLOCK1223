@@ -13,10 +13,10 @@ export const Safety: React.FC = () => {
         
         <div className="flex flex-col md:flex-row gap-12 items-center relative z-10">
           <div className="flex-1">
-            <h2 className="text-3xl font-bold mb-4">{t('safety.title')}</h2>
-            <p className="text-subtext mb-8">{t('safety.subtitle')}</p>
+            <h2 className="text-3xl font-bold mb-4">{t('home.safety.title')}</h2>
+            <p className="text-subtext mb-8">{t('home.safety.subtitle')}</p>
             <Button variant="ghost" className="bg-white hover:bg-white/80">
-              {t('safety.cta')}
+              {t('home.safety.cta')}
             </Button>
           </div>
           <div className="grid gap-4 w-full md:w-1/2">
@@ -25,8 +25,8 @@ export const Safety: React.FC = () => {
                 <Users weight="fill" />
               </div>
               <div>
-                <h4 className="font-bold text-sm mb-1">{t('safety.items.0.title')}</h4>
-                <p className="text-xs text-subtext">{t('safety.items.0.body')}</p>
+                <h4 className="font-bold text-sm mb-1">{t('home.safety.cards.0.title')}</h4>
+                <p className="text-xs text-subtext">{t('home.safety.cards.0.body')}</p>
               </div>
             </div>
             <div className="bg-white p-4 rounded-2xl flex items-start gap-4 shadow-sm hover:translate-y-[-2px] transition-transform">
@@ -34,8 +34,8 @@ export const Safety: React.FC = () => {
                 <ShieldCheck weight="fill" />
               </div>
               <div>
-                <h4 className="font-bold text-sm mb-1">{t('safety.items.1.title')}</h4>
-                <p className="text-xs text-subtext">{t('safety.items.1.body')}</p>
+                <h4 className="font-bold text-sm mb-1">{t('home.safety.cards.1.title')}</h4>
+                <p className="text-xs text-subtext">{t('home.safety.cards.1.body')}</p>
               </div>
             </div>
           </div>

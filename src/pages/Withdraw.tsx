@@ -19,16 +19,32 @@ export const Withdraw: React.FC = () => {
           <div className="bg-purple-50 rounded-2xl p-6 mb-4 flex items-center justify-between">
             <div>
               <p className="text-sm text-subtext mb-1">{t('withdraw.balance')}</p>
-              <p className="text-3xl font-bold text-ink">1,250.00 <span className="text-lg text-subtext font-medium">BWT</span></p>
+              <p className="text-3xl font-bold text-ink">1,250.00 <span className="text-lg text-subtext font-medium">{t('terms.bwtToken')}</span></p>
             </div>
             <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-purple-600 shadow-sm">
               <Wallet weight="fill" className="text-2xl" />
             </div>
           </div>
 
-          <div className="bg-blue-50 rounded-xl p-4 mb-8 flex items-start gap-3 border border-blue-100">
-             <Info weight="fill" className="text-blue-500 text-xl flex-shrink-0 mt-0.5" />
-             <p className="text-sm text-blue-800">{t('withdraw.breakdown')}</p>
+          <div className="bg-blue-50 rounded-xl p-4 mb-8 border border-blue-100">
+             <div className="flex items-center gap-2 mb-3">
+               <Info weight="fill" className="text-blue-500 text-lg" />
+               <p className="text-sm font-bold text-blue-800">Funds Breakdown</p>
+             </div>
+             <div className="grid grid-cols-3 gap-2">
+               <div className="bg-white rounded-lg p-2 text-center shadow-sm">
+                 <p className="text-[10px] text-subtext uppercase font-bold">Game</p>
+                 <p className="font-bold text-ink text-sm">750.00</p>
+               </div>
+               <div className="bg-white rounded-lg p-2 text-center shadow-sm">
+                 <p className="text-[10px] text-subtext uppercase font-bold">{t('terms.referral')}</p>
+                 <p className="font-bold text-ink text-sm">450.00</p>
+               </div>
+               <div className="bg-white rounded-lg p-2 text-center shadow-sm">
+                 <p className="text-[10px] text-subtext uppercase font-bold">{t('terms.treasurePool')}</p>
+                 <p className="font-bold text-ink text-sm">50.00</p>
+               </div>
+             </div>
           </div>
 
           <div className="space-y-6">

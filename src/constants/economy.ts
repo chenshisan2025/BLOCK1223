@@ -1,0 +1,68 @@
+export const ECONOMY = {
+  INVITE_REWARD_PERCENTAGE: 10,
+  TICKET_PRICE_BWT: 20,
+  REVIVE_PRICE_BWT: 10,
+  TREASURE_DRAW_INTERVAL_HOURS: 2,
+  REVIVE_SECONDS: 30,
+  REVIVE_MAX_COUNT: 5,
+  DAILY_FREE_RUNS: 1,
+  
+  // Game limits
+  ITEM_USE_LIMIT_ENDLESS: 5,
+  REVIVE_LIMIT_ENDLESS: 3,
+  
+  // Drop ranges
+  COMBO_DROP_MIN_BWT: 1,
+  COMBO_DROP_MAX_BWT: 10,
+  
+  // Payout parameters
+  LUCKY_WINNERS_COUNT: 100,
+  LARGE_REWARD_THRESHOLD_BWT: 1000,
+  LARGE_REWARD_RELEASE_DAYS: 30,
+  EARLY_CLAIM_EXTRA_BURN_PCT: 20,
+  
+  SPLITS: {
+    TICKET: {
+      POOL: 50,
+      BURN: 30,
+      REFERRER: 10,
+      PLATFORM: 10,
+    },
+    REVIVE: {
+      POOL: 50,
+      BURN: 30,
+      REFERRER: 10,
+      PLATFORM: 10,
+    },
+    ITEM_PACK: {
+      BURN: 50,
+      REFERRER: 10,
+      PLATFORM: 40,
+    }
+  }
+} as const;
+
+// Helper to get params for i18n interpolation
+export const getGameParams = () => ({
+  reviveCostBwt: ECONOMY.REVIVE_PRICE_BWT,
+  reviveSeconds: ECONOMY.REVIVE_SECONDS,
+  reviveMax: ECONOMY.REVIVE_MAX_COUNT,
+  ticketCostBwt: ECONOMY.TICKET_PRICE_BWT,
+  dailyFreeRuns: ECONOMY.DAILY_FREE_RUNS,
+  itemUseLimitEndless: ECONOMY.ITEM_USE_LIMIT_ENDLESS,
+  reviveLimitEndless: ECONOMY.REVIVE_LIMIT_ENDLESS,
+  comboDropMinBwt: ECONOMY.COMBO_DROP_MIN_BWT,
+  comboDropMaxBwt: ECONOMY.COMBO_DROP_MAX_BWT,
+  drawIntervalHours: ECONOMY.TREASURE_DRAW_INTERVAL_HOURS,
+  luckyWinnersCount: ECONOMY.LUCKY_WINNERS_COUNT,
+  referralPct: ECONOMY.INVITE_REWARD_PERCENTAGE,
+  treasurePoolPct: ECONOMY.SPLITS.REVIVE.POOL,
+  leaderboardPoolPct: ECONOMY.SPLITS.TICKET.POOL,
+  burnPct: ECONOMY.SPLITS.TICKET.BURN,
+  treasuryPct: ECONOMY.SPLITS.TICKET.PLATFORM,
+  itemBurnPct: ECONOMY.SPLITS.ITEM_PACK.BURN,
+  itemTreasuryPct: ECONOMY.SPLITS.ITEM_PACK.PLATFORM,
+  largeRewardThresholdBwt: ECONOMY.LARGE_REWARD_THRESHOLD_BWT,
+  largeRewardReleaseDays: ECONOMY.LARGE_REWARD_RELEASE_DAYS,
+  earlyClaimExtraBurnPct: ECONOMY.EARLY_CLAIM_EXTRA_BURN_PCT,
+});

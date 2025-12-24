@@ -44,36 +44,36 @@ export const AhaDemo: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* Left: Text */}
         <div>
-          <h2 className="text-3xl md:text-4xl font-extrabold mb-4">{t('aha.title')}</h2>
-          <p className="text-lg text-subtext mb-8 leading-relaxed">{t('aha.subtitle')}</p>
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-4">{t('home.aha.title')}</h2>
+          <p className="text-lg text-subtext mb-8 leading-relaxed">{t('home.aha.subtitle')}</p>
           
           <ul className="space-y-4 mb-8">
             <li className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-full bg-blue-100 text-blue-500 flex items-center justify-center text-lg">
                 <Check weight="fill" />
               </div>
-              <span className="font-medium text-ink">{t('aha.points.0')}</span>
+              <span className="font-medium text-ink">{t('home.aha.points.0')}</span>
             </li>
             <li className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-full bg-purple-100 text-purple-500 flex items-center justify-center text-lg">
                 <Users weight="fill" />
               </div>
-              <span className="font-medium text-ink">{t('aha.points.1')}</span>
+              <span className="font-medium text-ink">{t('home.aha.points.1')}</span>
             </li>
             <li className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-full bg-green-100 text-green-500 flex items-center justify-center text-lg">
                 <Wallet weight="fill" />
               </div>
-              <span className="font-medium text-ink">{t('aha.points.2')}</span>
+              <span className="font-medium text-ink">{t('home.aha.points.2')}</span>
             </li>
           </ul>
 
           <div className="flex gap-4">
-            <Button>{t('aha.ctaPlay')}</Button>
-            <Button variant="ghost">{t('aha.ctaWatch')}</Button>
+            <Button>{t('home.aha.cta.play')}</Button>
+            <Button variant="ghost">{t('home.aha.cta.watch')}</Button>
           </div>
           <p className="text-xs text-subtext mt-4 flex items-center gap-1">
-            <Info weight="fill" /> <span>{t('aha.demoNote')}</span>
+            <Info weight="fill" /> <span>{t('home.aha.demoNote')}</span>
           </p>
         </div>
 
@@ -93,21 +93,21 @@ export const AhaDemo: React.FC = () => {
                     🎁
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold mb-2">{t('hero.box.title')}</h3>
+                <h3 className="text-2xl font-bold mb-2">{t('home.hero.boxCard.title')}</h3>
                 <div className="mt-6 w-full py-3 rounded-full bg-purple-600 text-white font-bold shadow-lg hover:bg-purple-700 transition-colors">
-                  {t('aha.demoCta')}
+                  {t('common.cta.openNow')}
                 </div>
               </div>
             ) : (
               <div id="demo-state-revealed">
                 <div className="w-32 h-32 mx-auto bg-green-100 rounded-full flex items-center justify-center mb-4 text-5xl animate-pop">💎</div>
-                <p className="text-xs font-bold text-subtext uppercase tracking-widest mb-1">{t('aha.rewardTitle')}</p>
+                <p className="text-xs font-bold text-subtext uppercase tracking-widest mb-1">{t('common.label.estReward')}</p>
                 <h3 className="text-3xl font-extrabold text-ink mb-6">5 USDT</h3>
                 <button 
                   className="w-full py-3 rounded-full bg-gray-100 text-ink font-bold hover:bg-gray-200 transition-colors mb-2 flex items-center justify-center gap-2"
                   onClick={resetAhaDemo}
                 >
-                  <ArrowCounterClockwise weight="bold" /> Play Again
+                  <ArrowCounterClockwise weight="bold" /> {t('common.cta.playAgain')}
                 </button>
               </div>
             )}

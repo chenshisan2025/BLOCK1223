@@ -1,46 +1,991 @@
 {
-    "nav": { "play": "开玩", "rewards": "奖励盲盒", "events": "活动", "leaderboard": "排行榜", "login": "登录", "playNow": "立即开玩", "help": "帮助", "safety": "安全", "invite": "邀请返佣", "transparency": "透明看板" },
-    "hero": { "pill": "欢迎来到游戏乐园", "title1": "玩 60 秒。", "title2": "开一个盒子。", "subtitle": "你的时间终于开始回本。像三消一样轻松。赢取 BWT 与惊喜掉落奖励。", "ctaPlay": "立即开玩", "ctaWatch": "看玩法视频", "ctaInvite": "邀请返佣", "badges": { "withdrawable": "可提现", "humanOnly": "真人奖励", "freeRounds": "过关拿奖", "referral10": "邀请返 10%", "onchain": "链上透明", "chestDraw": "宝盒 2 小时开奖" }, "box": { "title": "惊喜盒子", "sub": "USDT / BWT / NFTs", "cta": "点一下开玩" } },
-    "drops": { "title": "今日掉落", "subtitle": "玩游戏时，可能会随机遇到特别盒子。", "cta": "查看奖励详情" },
-    "aha": { "title": "打开盒子，来点惊喜。", "subtitle": "玩的时候会随机遇到盒子。奖励来自活动与合作掉落。", "points": ["无需复杂设置", "真人才有奖励", "准备好了再提现"], "demoNote": "演示示例，奖励以活动规则为准。", "ctaPlay": "立即开玩", "ctaWatch": "看玩法视频", "demoCta": "点一下开玩", "rewardTitle": "你获得了", "treasureReferral": "宝盒与返佣" },
-    "steps": { "title": "3 步开玩", "subtitle": "不用懂币圈，只要开心。", "s1Title": "一键登录", "s1Body": "用 Google 或邮箱登录，自动创建安全账户。", "s2Title": "玩 60 秒", "s2Body": "快节奏三消，Q 弹特效。", "s3Title": "打开盒子", "s3Body": "打开盒子拿到奖励。" },
-    "safety": { "title": "这是给真人玩家的游乐园。", "subtitle": "高价值奖励会进行真人验证，保护公平体验。", "cta": "了解安全与公平", "items": [{ "title": "真人才有奖励", "body": "脚本与异常模式拿不到奖励。" }, { "title": "分账链上公开透明", "body": "高价值掉落可能需要额外验证。" }] },
-    "faq": { "title": "快速答疑", "subtitle": "开玩前你最关心的问题。", "cta": "查看全部 FAQ", "items": [{ "q": "真的能提现吗？", "a": "可以。提现方式会受活动规则影响。" }, { "q": "我需要懂钱包吗？", "a": "不需要。你可以先当作普通游戏玩。" }, { "q": "奖励从哪里来？", "a": "来自活动、合作掉落与奖池。" }, { "q": "为什么没遇到盒子？", "a": "盒子不是每局必出。" }, { "q": "邀请返佣怎么算？", "a": "只有一级 10% 返佣。" }, { "q": "宝盒怎么开奖？", "a": "每 2 小时开奖一次。50% 分给 100 位幸运儿，50% 由持有者平分。" }, { "q": "我怎么确认分账是真的？", "a": "所有资金流向链上公开，可在透明看板查看。" }] },
-    "login": { "title": "登录", "subtitle": "选择一种方式开始", "note": "登录即代表同意服务条款与隐私政策。" },
-    "rewards": { "title": "闯关奖励", "subtitle": "每升一级，解锁更多惊喜。", "level": "等级", "claim": "领取", "claimed": "已领取", "inviteRewards": "邀请返佣", "poolsSplits": "奖池与分账", "transparency": "透明看板" },
-    "withdraw": { "title": "提现", "balance": "当前余额", "amount": "提现金额", "max": "最大", "method": "提现方式", "submit": "确认提现", "note": "提现将在 24 小时内处理。", "breakdown": "您的余额包含：游戏奖励 / 宝盒奖金 / 邀请返佣", "verify": "链上核验 → 透明看板" },
-    "events": { "title": "精彩活动", "subtitle": "更多活动即将开启，敬请期待！" },
-    "leaderboard": { "title": "排行榜", "subtitle": "全服高手云集，虚位以待！" },
+  "brand": {
+    "name": "BLOCKWORLD",
+    "short": "BLOCKWORLD",
+    "slogan": "Web2 让你的时间归零，Web3 让你的时间变现。",
+    "tagline": "Human-only Arcade",
+    "mission": "将 30 亿 Web2 休闲玩家转化为 Web3 公民。"
+  },
+  "terms": {
+    "bwtToken": "BWT（Token 代币）",
+    "token": "Token（代币）",
+    "treasury": "平台金库",
+    "referral": "邀请返佣",
+    "burn": "销毁",
+    "pool": "奖池",
+    "treasurePool": "宝盒奖池",
+    "leaderboardPool": "排行榜奖池",
+    "sponsor": "赞助商",
+    "sponsorBox": "Sponsor Box",
+    "proofOfHuman": "Proof-of-Human（真人验证）",
+    "verifiedRun": "Verified Run（重放验证）",
+    "onChain": "链上",
+    "demo": "演示",
+    "simulated": "模拟",
+    "campaign": "活动",
+    "withdraw": "提现",
+    "revive": "复活",
+    "ticket": "门票",
+    "itemPacks": "道具包",
+    "storyMode": "剧情模式",
+    "endlessMode": "无尽模式",
+    "leaderboard": "排行榜",
+    "address": "地址",
+    "transaction": "交易",
+    "explorer": "区块浏览器"
+  },
+  "nav": {
+    "play": "开玩",
+    "rewards": "奖励中心",
+    "leaderboard": "排行榜",
+    "invite": "邀请返佣",
+    "transparency": "透明看板",
+    "help": "帮助",
+    "sponsors": "给赞助商",
+    "investors": "给投资人",
+    "startPlaying": "开始游戏",
+    "language": "语言",
+    "openMenu": "打开菜单",
+    "closeMenu": "关闭菜单"
+  },
+  "seo": {
+    "global": {
+      "siteName": "BLOCKWORLD",
+      "defaultTitle": "BLOCKWORLD — Web3 Arcade",
+      "defaultDescription": "玩 60 秒，开一个盒子。像三消一样轻松，赢取 BWT（Token 代币）与惊喜掉落。"
+    },
+    "home": {
+      "title": "BLOCKWORLD｜玩 60 秒，开一个盒子",
+      "description": "无需先懂 Web3。开玩、开盒、准备好再提现：链上透明可核验，真人才有奖励。"
+    },
+    "rewards": {
+      "title": "奖励中心｜规则、奖池与分账",
+      "description": "查看闯关奖励、奖池分账、Sponsor Box 机制与链上透明核验入口。"
+    },
+    "leaderboard": {
+      "title": "排行榜｜无尽冲榜与奖池",
+      "description": "每天首局免费，门票进入奖池。冲榜赢奖励，分账链上可核验。"
+    },
     "invite": {
-        "title": "邀请返佣 10%",
-        "subtitle": "朋友每一次复活 / 门票 / 道具消费，你都能拿到 10% BWT 返佣（仅一级）。",
-        "cta": "获取我的邀请链接",
-        "note": "仅一级返佣；真人验证通过后结算；异常/脚本行为无返佣。",
-        "stats": { "invited": "已邀请人数", "earned": "今日返佣", "total": "累计返佣" }
-    },
-    "treasure": {
-        "title": "宝盒开奖（每 2 小时一次）",
-        "subtitle": "每次复活都会获得一个宝盒。下一次开奖倒计时：{{countdown}}",
-        "cta": "查看本轮奖池",
-        "rule": "复活 10 BWT：50% 进奖池、30% 销毁、10% 返邀请人、10% 平台。",
-        "rules": "规则说明",
-        "winners": "查看上轮赢家"
-    },
-    "leaderboardPool": {
-        "title": "无尽排行榜奖池",
-        "subtitle": "门票收入自动注入奖池，冲榜就有机会分奖金。",
-        "cta": "去无尽模式冲榜",
-        "rule": "门票 20 BWT：50% 奖池、30% 销毁、10% 返邀请人、10% 平台。"
+      "title": "邀请返佣｜一级 10% 返佣",
+      "description": "邀请好友一起开玩。仅一级返佣，返佣结算需通过真人验证。"
     },
     "transparency": {
-        "title": "BWT 资金流向链上公开透明",
-        "subtitle": "奖池、销毁、返佣、平台金库，全都可实时核验。",
-        "cta": "打开实时透明看板",
-        "cards": { "burn": "今日已销毁", "pool": "宝盒奖池", "referral": "今日已返佣", "treasury": "平台金库" }
+      "title": "透明看板｜链上公开可核验",
+      "description": "奖池、销毁、返佣与平台金库全部公开透明，并提供交易流与核验指引。"
     },
-    "chips": {
-        "treasurePool": "宝盒奖池",
-        "leaderboardPool": "排行榜奖池",
-        "playEndless": "冲榜分钱"
+    "help": {
+      "title": "帮助中心｜规则、提现、安全与核验",
+      "description": "完整游戏规则、宝盒开奖、返佣规则、提现安全等级与反作弊说明。"
+    },
+    "sponsors": {
+      "title": "给赞助商｜Human-only 投放与可核验报表",
+      "description": "把营销预算变成真实玩家收益：可衡量、可审计、链上可核验。"
+    },
+    "investors": {
+      "title": "给投资人｜Web3 大规模采用协议",
+      "description": "用低门槛休闲游戏把 Web2 玩家无痛引入 Web3：账户体系 + Sponsor Engine + Proof-of-Human + 链上透明。"
+    },
+    "legal": {
+      "title": "官方规则与条款",
+      "description": "官方规则（AMOE）、服务条款、隐私政策与风险提示。"
     }
+  },
+  "common": {
+    "label": {
+      "live": "LIVE",
+      "demo": "演示",
+      "simulated": "模拟",
+      "updatedAt": "最近更新",
+      "network": "网络",
+      "endsIn": "结束倒计时",
+      "nextDrawIn": "距离开奖",
+      "estReward": "预计奖励",
+      "poweredBy": "Powered by",
+      "learn": "了解",
+      "more": "更多",
+      "optional": "可选",
+      "recommended": "推荐",
+      "new": "NEW",
+      "beta": "BETA"
+    },
+    "badge": {
+      "noWallet": "无需钱包也能开玩",
+      "withdrawable": "奖励可提走（按规则）",
+      "humanOnly": "真人才有奖励",
+      "onChainTransparent": "链上公开透明",
+      "fairPlay": "公平竞技",
+      "demoData": "演示数据",
+      "simulatedEffect": "模拟效果"
+    },
+    "cta": {
+      "startPlaying": "开始游戏",
+      "playNow": "立即开玩",
+      "watchDemo": "看 60 秒演示",
+      "watchGameplay": "看玩法视频",
+      "openBox": "打开盒子",
+      "openNow": "立即打开",
+      "playAgain": "再来一次",
+      "backHome": "返回首页",
+      "back": "返回",
+      "next": "下一步",
+      "close": "关闭",
+      "confirm": "确认",
+      "cancel": "取消",
+      "submit": "提交",
+      "refresh": "刷新",
+      "copy": "复制",
+      "copied": "已复制",
+      "share": "分享",
+      "generatePoster": "生成分享海报",
+      "seeRewards": "查看奖励详情 →",
+      "seeDetails": "查看详情 →",
+      "seeAllFaq": "查看全部 FAQ →",
+      "seeAllRules": "查看全部规则 →",
+      "verifyOnTransparency": "去透明看板核验 →",
+      "verifyOnChain": "链上核验 →",
+      "openInExplorer": "在区块浏览器打开 →",
+      "downloadSponsorKit": "获取 Sponsor Kit（PDF）",
+      "downloadInvestorKit": "下载 Investor Kit（Deck + Memo）",
+      "bookCall": "预约沟通",
+      "contactBD": "联系商务",
+      "contactInvestor": "投资沟通",
+      "learnSafety": "了解安全与公平 →",
+      "claim": "领取",
+      "claimed": "已领取",
+      "withdraw": "去提现",
+      "max": "MAX",
+      "upgrade": "一键升级",
+      "turnOnDemo": "开启演示模式",
+      "switchLanguage": "切换语言"
+    },
+    "status": {
+      "loading": "加载中…",
+      "syncing": "同步中…",
+      "success": "成功",
+      "failed": "失败",
+      "pending": "待结算",
+      "claimable": "可领取",
+      "locked": "未解锁",
+      "verified": "已验证",
+      "unverified": "未验证",
+      "loggedIn": "已登录",
+      "loggedOut": "未登录",
+      "comingSoon": "敬请期待",
+      "maintenance": "维护中"
+    },
+    "empty": {
+      "noRecords": "暂无记录。稍后再来看看。",
+      "noCampaignsToday": "今天没有特别活动，但你仍可能在对局中遇到随机盒子。",
+      "notLoggedIn": "登录后可查看完整信息。",
+      "noRewards": "当前暂无可领取奖励。继续玩几局试试吧。",
+      "noInvites": "你还没有邀请记录。先复制邀请链接发给好友吧。"
+    },
+    "toast": {
+      "linkCopied": "已复制！发给好友开玩吧。",
+      "copiedInviteCode": "邀请码已复制。",
+      "openedBox": "你打开了一个盒子！",
+      "actionRequiresLogin": "请先登录，再继续操作。"
+    },
+    "error": {
+      "unknown": "发生未知错误，请稍后再试。",
+      "network": "网络异常，请检查网络后重试。",
+      "rateLimited": "操作过于频繁，请稍后再试。",
+      "notSupportedRegion": "你所在地区暂不支持该功能。",
+      "ageRestricted": "你需要满足年龄要求才能参与该活动。",
+      "invalidEmail": "邮箱格式不正确。",
+      "invalidAddress": "地址格式不正确。",
+      "insufficientBalance": "余额不足。",
+      "verificationFailed": "验证未通过，请重试或联系客服。"
+    },
+    "form": {
+      "email": "邮箱",
+      "code": "验证码",
+      "address": "收款地址",
+      "amount": "金额",
+      "asset": "选择资产",
+      "network": "网络",
+      "note": "备注（可选）"
+    },
+    "validation": {
+      "required": "此项为必填。",
+      "min": "不能少于 {{min}}。",
+      "max": "不能超过 {{max}}。",
+      "between": "请填写 {{min}} 到 {{max}} 之间的值。"
+    },
+    "tooltip": {
+      "demoData": "这是演示数据，用于说明机制。真实数据上线后以链上与报表为准。",
+      "simulatedPartnership": "本展示为模拟效果，非真实合作或真实入金展示。",
+      "onChainProof": "点击可跳转区块浏览器核验金额、地址与事件。",
+      "humanOnly": "高价值奖励可能触发真人验证；脚本行为不结算。",
+      "estimatedReward": "预计奖励为演示与估算；结算以最终奖池与规则为准。"
+    },
+    "aria": {
+      "openMenu": "打开导航菜单",
+      "closeMenu": "关闭导航菜单",
+      "switchLanguage": "切换语言",
+      "openLogin": "打开登录窗口",
+      "closeModal": "关闭弹窗",
+      "copyToClipboard": "复制到剪贴板",
+      "openInExplorer": "在区块浏览器打开",
+      "expand": "展开",
+      "collapse": "收起"
+    },
+    "legal": {
+      "disclaimerGlobal": "奖励为活动机制演示与规则说明，不构成收益承诺。实际掉落、结算与提现以活动规则、地区限制与真人验证结果为准。",
+      "noFinancialAdvice": "本网站内容不构成投资建议或财务建议。",
+      "tokenUtilityNotice": "BWT 为平台 Token（代币），用于平台内玩法权益，不代表任何股权或收益承诺。",
+      "voidWhereProhibited": "VOID WHERE PROHIBITED.",
+      "amoeLine": "无须付费即可参与宝盒抽奖。详情请见《官方规则》中的替代参与方式（AMOE）条款。VOID WHERE PROHIBITED.",
+      "officialRules": "官方规则",
+      "termsOfService": "服务条款",
+      "privacyPolicy": "隐私政策",
+      "riskDisclosure": "风险提示",
+      "simulatedDisclaimer": "演示模式：数据与效果为模拟，用于说明机制，非真实运营数据展示。",
+      "simulatedPartnership": "模拟 Sponsor 注入效果，非真实合作展示。",
+      "transparencyLag": "展示可能有索引延迟；以区块浏览器为最终准。"
+    }
+  },
+  "auth": {
+    "loginModal": {
+      "title": "一键入园",
+      "subtitle": "用邮箱或 Google 登录，马上开始第一局。",
+      "google": "用 Google 登录",
+      "email": "用邮箱登录",
+      "note": "我们会为你自动创建一个安全的游戏账户。",
+      "agreement": "继续即表示你同意《服务条款》与《隐私政策》。",
+      "or": "或"
+    },
+    "account": {
+      "title": "我的账户",
+      "logout": "退出登录"
+    }
+  },
+  "game": {
+    "params": {
+      "reviveCostBwt": "{{reviveCostBwt}}",
+      "reviveSeconds": "{{reviveSeconds}}",
+      "reviveMax": "{{reviveMax}}",
+      "ticketCostBwt": "{{ticketCostBwt}}",
+      "dailyFreeRuns": "{{dailyFreeRuns}}",
+      "itemUseLimitEndless": "{{itemUseLimitEndless}}",
+      "reviveLimitEndless": "{{reviveLimitEndless}}",
+      "comboDropMinBwt": "{{comboDropMinBwt}}",
+      "comboDropMaxBwt": "{{comboDropMaxBwt}}",
+      "drawIntervalHours": "{{drawIntervalHours}}",
+      "luckyWinnersCount": "{{luckyWinnersCount}}",
+      "referralPct": "{{referralPct}}",
+      "treasurePoolPct": "{{treasurePoolPct}}",
+      "leaderboardPoolPct": "{{leaderboardPoolPct}}",
+      "burnPct": "{{burnPct}}",
+      "treasuryPct": "{{treasuryPct}}",
+      "itemBurnPct": "{{itemBurnPct}}",
+      "itemTreasuryPct": "{{itemTreasuryPct}}",
+      "largeRewardThresholdBwt": "{{largeRewardThresholdBwt}}",
+      "largeRewardReleaseDays": "{{largeRewardReleaseDays}}",
+      "earlyClaimExtraBurnPct": "{{earlyClaimExtraBurnPct}}"
+    },
+    "mechanics": {
+      "comboDrop": {
+        "title": "五连消奖励",
+        "bodyTemplate": "触发五连消时，随机空投 {{comboDropMinBwt}}–{{comboDropMaxBwt}} BWT（代币）。",
+        "note": "高价值掉落可能触发真人验证；脚本行为不结算。"
+      },
+      "revive": {
+        "title": "复活",
+        "bodyTemplate": "支付 {{reviveCostBwt}} BWT，获得 +{{reviveSeconds}} 秒（最多 {{reviveMax}} 次）。"
+      },
+      "ticket": {
+        "title": "无尽门票",
+        "bodyTemplate": "每天第 {{dailyFreeRuns}} 次免费。之后入场券 {{ticketCostBwt}} BWT。"
+      },
+      "items": {
+        "title": "道具包",
+        "storyRule": "剧情模式道具使用不设次数上限。",
+        "endlessRuleTemplate": "无尽模式每种道具最多使用 {{itemUseLimitEndless}} 次；复活最多 {{reviveLimitEndless}} 次。"
+      },
+      "treasure": {
+        "title": "宝盒开奖",
+        "bodyTemplate": "每次复活获得 1 个宝盒。宝盒每 {{drawIntervalHours}} 小时开奖一次。",
+        "payoutTemplate": "奖池 50% 抽取 {{luckyWinnersCount}} 名幸运玩家；另外 50% 由本轮剩余宝盒持有人平分。"
+      },
+      "rewardRelease": {
+        "title": "奖励到账与释放",
+        "smallInstant": "小额奖励：即时到账（T+0）。",
+        "largeLinearTemplate": "大额奖励：默认 {{largeRewardReleaseDays}} 天线性释放，降低异常波动与防套利。",
+        "choiceTemplate": "你可选择“立即领取”，但会额外销毁 {{earlyClaimExtraBurnPct}}% 作为风控成本。",
+        "note": "具体阈值与规则以活动页面与官方规则为准。"
+      }
+    },
+    "splits": {
+      "reviveToTreasure": {
+        "titleTemplate": "复活（{{reviveCostBwt}} BWT）→ 宝盒奖池",
+        "lineTemplate": "{{treasurePoolPct}}% 进宝盒奖池 · {{burnPct}}% 销毁 · {{referralPct}}% 邀请返佣 · {{treasuryPct}}% 平台金库"
+      },
+      "ticketToLeaderboard": {
+        "titleTemplate": "无尽门票（{{ticketCostBwt}} BWT）→ 排行榜奖池",
+        "lineTemplate": "{{leaderboardPoolPct}}% 进排行榜奖池 · {{burnPct}}% 销毁 · {{referralPct}}% 邀请返佣 · {{treasuryPct}}% 平台金库"
+      },
+      "itemsRevenue": {
+        "title": "道具包收入分账",
+        "lineTemplate": "{{itemBurnPct}}% 销毁 · {{referralPct}}% 邀请返佣 · {{itemTreasuryPct}}% 平台金库"
+      }
+    }
+  },
+  "footer": {
+    "brandLine": "Web2 让你的时间归零，Web3 让你的时间变现。",
+    "groups": {
+      "product": "产品",
+      "support": "支持",
+      "business": "商务",
+      "legal": "条款"
+    },
+    "links": {
+      "play": "开玩",
+      "rewards": "奖励中心",
+      "leaderboard": "排行榜",
+      "invite": "邀请返佣",
+      "transparency": "透明看板",
+      "help": "帮助中心",
+      "safety": "安全与公平",
+      "sponsors": "给赞助商",
+      "investors": "给投资人",
+      "officialRules": "官方规则（AMOE）",
+      "terms": "服务条款",
+      "privacy": "隐私政策",
+      "risk": "风险提示"
+    },
+    "legalLine": "无须付费即可参与宝盒抽奖。详情请见《官方规则》（AMOE）。VOID WHERE PROHIBITED.",
+    "copyright": "© 2025 BLOCKWORLD. Human-only Arcade."
+  },
+  "home": {
+    "hero": {
+      "pill": "WELCOME TO THE ARCADE",
+      "titleLine1": "玩 60 秒。",
+      "titleLine2": "开一个盒子。",
+      "subtitle": "像三消一样轻松。你的时间终于开始回本：赢取 BWT（代币）与惊喜掉落。",
+      "helper": "无需先懂 Web3；想提现时我们再带你完成安全设置。",
+      "cta": {
+        "primary": "立即开玩",
+        "secondary": "看 60 秒演示"
+      },
+      "badges": {
+        "0": "无需钱包也能开玩",
+        "1": "真人才有奖励",
+        "2": "链上公开透明"
+      },
+      "boxCard": {
+        "title": "惊喜盒子",
+        "subtitle": "USDT / BWT / NFT",
+        "cta": "点一下开局",
+        "tag": "演示"
+      }
+    },
+    "arcadeLive": {
+      "title": "乐园实时大屏",
+      "noteTemplate": "LIVE · 最近更新：{{time}} · 网络：{{network}}（演示数据）",
+      "kpi": {
+        "treasurePool": "宝盒奖池",
+        "nextDrawIn": "距离开奖",
+        "leaderboardPool": "排行榜奖池",
+        "burnedToday": "今日销毁",
+        "referralPaidToday": "今日返佣",
+        "treasuryToday": "今日平台金库"
+      },
+      "cta": "去透明看板核验 →",
+      "tooltip": "这是演示数据，用于说明机制。真实数据上线后以链上与报表为准。"
+    },
+    "ticker": {
+      "label": "实时动态",
+      "items": {
+        "0": "玩家 0x12…34 刚刚从盒子里开出 500 BWT",
+        "1": "新的活动奖池已注入（模拟演示）",
+        "2": "今日销毁累计：1,203,400 BWT（演示）",
+        "3": "宝盒将在 08:12 后开奖（演示）"
+      },
+      "note": "为演示机制与节奏，动态内容为模拟展示。"
+    },
+    "drops": {
+      "title": "今日掉落",
+      "subtitle": "边玩边遇到特别盒子。今天的好运清单在这里。",
+      "cta": "查看奖励详情 →",
+      "empty": "今天没有特别活动，但你仍可能在对局中遇到随机盒子。"
+    },
+    "aha": {
+      "title": "打开盒子，来点惊喜。",
+      "subtitle": "盒子会在游戏过程中随机出现。奖励来自活动与合作掉落。",
+      "points": {
+        "0": "无需复杂设置",
+        "1": "真人才有奖励",
+        "2": "准备好了再提现"
+      },
+      "demoTag": "演示",
+      "demoNote": "演示示例，奖励以活动规则为准。",
+      "cta": {
+        "play": "立即开玩",
+        "watch": "看玩法视频"
+      },
+      "verifyLink": "链上核验 →",
+      "simulatedPartnershipNote": "模拟 Sponsor 注入效果，非真实合作展示。"
+    },
+    "modes": {
+      "title": "两种模式，两种爽点",
+      "story": {
+        "title": "剧情闯关",
+        "descTemplate": "时间到了？可选花 {{reviveCostBwt}} BWT 复活 +{{reviveSeconds}} 秒（最多 {{reviveMax}} 次）。",
+        "note": "剧情模式道具使用不设次数上限。",
+        "cta": "去闯关"
+      },
+      "endless": {
+        "title": "无尽冲榜",
+        "descTemplate": "每天第 1 次免费。之后入场券 {{ticketCostBwt}} BWT。",
+        "noteTemplate": "无尽模式每种道具最多使用 {{itemUseLimitEndless}} 次；复活最多 {{reviveLimitEndless}} 次。",
+        "cta": "去冲榜"
+      }
+    },
+    "comboDrop": {
+      "title": "五连消 = 掉 BWT！",
+      "bodyTemplate": "触发五连消时，随机空投 {{comboDropMinBwt}}–{{comboDropMaxBwt}} BWT（代币）。",
+      "note": "高价值掉落可能触发真人验证；脚本行为不结算。"
+    },
+    "treasure": {
+      "title": "复活不只是续命，还能拿宝盒",
+      "bodyTemplate": "每次复活支付 BWT，会获得 1 个宝盒。宝盒每 {{drawIntervalHours}} 小时开奖一次。",
+      "payoutTemplate": "奖池 50% 抽取 {{luckyWinnersCount}} 名幸运玩家；另外 50% 由本轮剩余宝盒持有人平分。",
+      "cta": {
+        "thisRound": "查看本轮奖池 →",
+        "lastWinners": "查看上轮赢家 →"
+      }
+    },
+    "inviteCard": {
+      "title": "邀请好友，一起开玩，一起拿返佣",
+      "bodyTemplate": "仅一级返佣：你好友的消耗里，{{referralPct}}% 会返还给你（需真人验证通过后结算）。",
+      "cta": {
+        "copy": "复制邀请链接",
+        "view": "查看我的返佣"
+      }
+    },
+    "migrationPack": {
+      "title": "链上迁移欢迎礼（活动）",
+      "subtitle": "你的链上足迹应该被尊重。完成真人验证后，领取一个欢迎盒子。",
+      "note": "活动资格、地区限制与奖励规则以活动页与官方规则为准。",
+      "cta": {
+        "learn": "查看活动规则 →",
+        "play": "立即开玩"
+      }
+    },
+    "safety": {
+      "title": "这是给真人玩家的游乐园",
+      "subtitle": "我们用真人验证保护公平：脚本拿不到奖励，真实玩家不被抢走机会。",
+      "cards": {
+        "0": {
+          "title": "真人才有奖励",
+          "body": "异常轨迹与脚本行为不结算。"
+        },
+        "1": {
+          "title": "高价值奖励会更严格",
+          "body": "越大奖励，验证越严。"
+        },
+        "2": {
+          "title": "链上透明可核验",
+          "body": "奖池/销毁/返佣/平台金库可实时查看。"
+        }
+      },
+      "cta": "了解安全与公平 →"
+    },
+    "faq": {
+      "title": "快速答疑",
+      "subtitle": "开玩前你最关心的问题。",
+      "cta": "查看全部 FAQ →",
+      "items": {
+        "0": {
+          "q": "真的能提现吗？",
+          "a": "可以。提现方式与额度以活动规则、地区限制与真人验证结果为准。"
+        },
+        "1": {
+          "q": "我需要懂钱包吗？",
+          "a": "不需要。你可以像普通游戏一样先玩，提现时再完成安全设置。"
+        },
+        "2": {
+          "q": "为什么我没遇到盒子？",
+          "a": "盒子不是每局必出；会受活动库存、概率与风控影响。"
+        },
+        "3": {
+          "q": "BWT 是什么？",
+          "a": "BWT 是平台 Token（代币），用于复活、门票、道具与活动权益。"
+        },
+        "4": {
+          "q": "宝盒怎么开奖？",
+          "a": "每 2 小时开奖一次；50% 抽 100 人，50% 由本轮剩余持有人平分。"
+        },
+        "5": {
+          "q": "邀请返佣怎么算？",
+          "a": "仅一级返佣；按好友消耗分账的一定比例返还，结算需通过真人验证。"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "header": {
+      "title": "奖励中心",
+      "subtitle": "这里是你所有奖励、奖池与规则的总入口。",
+      "cta": {
+        "play": "去开玩",
+        "verify": "去透明看板核验"
+      }
+    },
+    "types": {
+      "title": "奖励类型",
+      "cards": {
+        "0": {
+          "title": "BWT（Token 代币）",
+          "body": "用于复活、门票、道具与活动权益。"
+        },
+        "1": {
+          "title": "稳定奖励（如 USDT）",
+          "body": "更直观的奖励体验，按活动规则可提现。"
+        },
+        "2": {
+          "title": "活动掉落 / 合作奖励",
+          "body": "来自交易所、L1/L2、DeFi 等活动预算。"
+        }
+      }
+    },
+    "progress": {
+      "title": "闯关奖励",
+      "subtitle": "每升一级，解锁更多惊喜。",
+      "note": "奖励以活动库存与规则为准，部分奖励需真人验证后结算。",
+      "status": {
+        "claim": "领取",
+        "claimed": "已领取",
+        "locked": "未解锁"
+      }
+    },
+    "splits": {
+      "title": "奖池与分账",
+      "subtitle": "所有渠道流向链上公开透明，并提供实时可视化展示。",
+      "rows": {
+        "revive": {
+          "titleTemplate": "复活（{{reviveCostBwt}} BWT）→ 宝盒奖池",
+          "lineTemplate": "{{treasurePoolPct}}% 进宝盒奖池 · {{burnPct}}% 销毁 · {{referralPct}}% 邀请返佣 · {{treasuryPct}}% 平台金库"
+        },
+        "ticket": {
+          "titleTemplate": "无尽门票（{{ticketCostBwt}} BWT）→ 排行榜奖池",
+          "lineTemplate": "{{leaderboardPoolPct}}% 进排行榜奖池 · {{burnPct}}% 销毁 · {{referralPct}}% 邀请返佣 · {{treasuryPct}}% 平台金库"
+        },
+        "items": {
+          "title": "道具包收入分账",
+          "lineTemplate": "{{itemBurnPct}}% 销毁 · {{referralPct}}% 邀请返佣 · {{itemTreasuryPct}}% 平台金库"
+        }
+      },
+      "cta": "去透明看板核验 →"
+    },
+    "rewardRelease": {
+      "title": "奖励到账与释放规则",
+      "subtitle": "为保障公平与风控，小额即时，大额分期；并提供“立即领取”选项。",
+      "smallInstant": "小额奖励：即时到账（T+0）。",
+      "largeLinearTemplate": "大额奖励：默认 {{largeRewardReleaseDays}} 天线性释放。",
+      "choiceTemplate": "立即领取：可选，但会额外销毁 {{earlyClaimExtraBurnPct}}% 作为风控成本。",
+      "note": "阈值与规则以活动页面与官方规则为准。"
+    },
+    "sponsorBox": {
+      "title": "Sponsor Box：游乐园的惊喜扭蛋",
+      "p1": "合作方把活动预算放进掉落池，你在游戏过程中随机遇到它。",
+      "p2": "你拿到奖励；合作方拿到完成教育与交互的新用户。",
+      "cta": "查看今日掉落 →",
+      "simulatedNote": "演示展示：合作方示例与注入效果为模拟。"
+    }
+  },
+  "leaderboard": {
+    "header": {
+      "title": "无尽冲榜",
+      "subtitleTemplate": "每天第 1 次免费。之后入场券 {{ticketCostBwt}} BWT。冲榜分奖池。",
+      "endsInTemplate": "本轮结束倒计时：{{time}}",
+      "cta": {
+        "startFree": "开始无尽（今日免费）",
+        "buyTicketTemplate": "购买门票 {{ticketCostBwt}} BWT"
+      }
+    },
+    "pool": {
+      "title": "当前奖池",
+      "splitLineTemplate": "门票分账：{{leaderboardPoolPct}}% 进奖池 · {{burnPct}}% 销毁 · {{referralPct}}% 邀请返佣 · {{treasuryPct}}% 平台金库",
+      "cta": "去透明看板核验 →"
+    },
+    "myStatus": {
+      "loggedInTemplate": "我的排名：#{{rank}} · 我的分数：{{score}} · 预计奖励：{{reward}}",
+      "loggedOut": "登录后可查看我的排名与预计奖励。",
+      "verifyBadge": "Verified"
+    },
+    "table": {
+      "title": "Top 100",
+      "columns": {
+        "rank": "排名",
+        "player": "玩家",
+        "score": "分数",
+        "estReward": "预计奖励"
+      },
+      "note": "预计奖励为演示与估算；以结算时奖池与规则为准。",
+      "cta": "查看前 100 →"
+    },
+    "share": {
+      "title": "把战绩晒出来，顺便带上返佣",
+      "bodyTemplate": "邀请好友一起冲榜，你可获得 TA 消耗的 {{referralPct}}% 返佣（一级）。",
+      "cta": {
+        "share": "分享战绩",
+        "copy": "复制邀请链接"
+      }
+    }
+  },
+  "invite": {
+    "header": {
+      "title": "邀请返佣",
+      "subtitleTemplate": "仅一级返佣：好友消耗的 {{referralPct}}% 返还给你（需真人验证通过后结算）。"
+    },
+    "stats": {
+      "title": "我的数据",
+      "metrics": {
+        "invites": "已邀请人数",
+        "pending": "待结算返佣",
+        "claimable": "可领取返佣",
+        "lifetime": "累计返佣"
+      },
+      "cta": {
+        "withdraw": "去提现"
+      },
+      "note": "返佣在真人验证通过后结算；异常/脚本行为无返佣。"
+    },
+    "share": {
+      "title": "复制链接，一键分享",
+      "subtitle": "好友注册并开玩后，你会自动获得返佣。",
+      "cta": {
+        "copy": "复制邀请链接",
+        "poster": "生成分享海报"
+      },
+      "toastCopied": "已复制！发给好友开玩吧。"
+    },
+    "rules": {
+      "title": "规则说明",
+      "items": {
+        "0": "仅一级返佣。",
+        "1": "返佣来源：复活/门票/道具包等 BWT 消耗分账。",
+        "2": "返佣结算：需通过真人验证后结算。"
+      }
+    },
+    "onChain": {
+      "cta": "查看链上返佣记录 →",
+      "note": "展示可能有索引延迟；以区块浏览器为最终准。"
+    },
+    "title": "邀请返佣 10%",
+    "subtitle": "好友每次复活 / 门票 / 道具消费，你都能拿到 10% BWT 返佣（仅一级）。",
+    "cta": "获取我的邀请链接",
+    "note": "返佣在真人验证通过后结算；异常/脚本行为无返佣。"
+  },
+  "transparency": {
+    "header": {
+      "title": "透明看板",
+      "subtitle": "奖池、销毁、返佣与平台金库——全部链上公开，可核验。",
+      "statusTemplate": "LIVE · 最近更新：{{time}} · 网络：{{network}}",
+      "demoNote": "演示模式：数据与效果为模拟，用于说明机制，非真实运营数据展示。"
+    },
+    "kpi": {
+      "treasurePool": "宝盒奖池余额",
+      "leaderboardPool": "排行榜奖池余额",
+      "burnedToday": "今日销毁",
+      "referralToday": "今日返佣",
+      "treasuryToday": "今日平台金库",
+      "totalBurned": "累计销毁",
+      "totalPayout": "累计发放"
+    },
+    "flow": {
+      "title": "实时资金流向",
+      "source": {
+        "title": "用户消耗",
+        "subtitle": "门票 / 复活 / 道具"
+      },
+      "segments": {
+        "pool": "奖池",
+        "burn": "销毁",
+        "referral": "邀请返佣",
+        "treasury": "平台金库"
+      },
+      "note": "所有渠道流向链上公开透明；你可在交易流中逐条核验。"
+    },
+    "addresses": {
+      "title": "公开地址（示例）",
+      "subtitle": "以下地址用于展示核验入口。真实地址以上线后的官方公布为准。",
+      "rows": {
+        "treasurePool": "宝盒奖池地址",
+        "leaderboardPool": "排行榜奖池地址",
+        "burn": "销毁（黑洞）地址",
+        "referral": "返佣分发地址",
+        "treasury": "平台金库地址"
+      },
+      "cta": "在区块浏览器打开 →"
+    },
+    "tx": {
+      "title": "最近交易",
+      "tabs": {
+        "all": "全部",
+        "treasure": "宝盒",
+        "leaderboard": "排行榜",
+        "referral": "返佣",
+        "burn": "销毁",
+        "treasury": "金库"
+      },
+      "table": {
+        "type": "类型",
+        "amount": "数量",
+        "time": "时间",
+        "tx": "Tx"
+      },
+      "empty": "暂无记录。稍后再来看看。",
+      "note": "展示可能有索引延迟；以区块浏览器为最终准。"
+    },
+    "verifyHow": {
+      "title": "怎么核验这是真实的？",
+      "steps": {
+        "0": "点击一条交易的 Tx",
+        "1": "在区块浏览器查看金额与地址",
+        "2": "对照奖池/销毁/返佣/平台金库地址"
+      },
+      "cta": "了解更多 →"
+    }
+  },
+  "help": {
+    "title": "帮助中心",
+    "subtitle": "规则、提现、安全与透明核验，一次讲清。",
+    "toc": {
+      "rewards": "奖励与掉落",
+      "items": "道具包",
+      "referral": "邀请返佣",
+      "transparency": "透明看板",
+      "safety": "安全与公平",
+      "faq": "常见问题",
+      "quickStart": "快速开始",
+      "treasure": "宝盒机制",
+      "leaderboard": "排行榜与无尽门票",
+      "welcome": "欢迎",
+      "withdraw": "提现与安全",
+      "modes": "玩法与模式",
+      "officialRules": "官方规则",
+      "bwt": "关于 BWT"
+    },
+    "sections": {
+      "rewards": {
+        "title": "奖励与掉落总览",
+        "body": "# 奖励与掉落总览\n\nBLOCKWORLD 的奖励系统由 4 个部分组成：**玩法空投、盒子掉落、奖池分发、Sponsor 活动**。\n\n## 1) 五连消空投（BlockRush）\n\n在三消玩法中触发 **五连消** 时，会空投随机数量的 **BWT**：\n\n- 空投范围：**5–100 BWT（随机）**\n- 触发频率：取决于你的操作与局内局势（无固定保证）\n\n## 2) 惊喜盒子（Mystery Box）\n\n- 游戏过程中随机出现的盒子。\n- 可能包含：**BWT / USDT / NFT / Sponsor Token / 活动奖励**（以活动与页面公告为准）。\n- 盒子是我们制造“爽点”的核心：你在 60 秒内看到“开盒得奖励”，会更愿意继续玩并分享。\n\n## 3) 宝盒（Treasure Box）\n\n- 当你支付 **BWT 复活** 时，会获得一个宝盒凭证。\n- 宝盒会参与每 2 小时一次的开奖（详见 [宝盒机制](./treasure-box.md)）。\n\n## 4) 排行榜奖池（Leaderboard Pool）\n\n- 无尽模式门票收入的一部分会进入排行榜奖池。\n- 冲榜结算时，按排名或规则分配奖池（详见 [排行榜与无尽门票](./leaderboard.md)）。\n\n## 奖励从哪里来？\n\n奖励通常来自以下来源的组合：\n\n- 玩家消耗形成的奖池（宝盒奖池 / 排行榜奖池）\n- Sponsor 活动预算（合作项目/交易所/链品牌）\n- 平台活动与运营预算（如节日、联名活动）\n\n> 提醒：奖励属于活动性质发放，存在地区限制、风控审核与规则迭代。所有关键流向在 [透明看板](./transparency.md) 可核验。"
+      },
+      "items": {
+        "title": "道具包与使用限制",
+        "body": "# 道具包与使用限制\n\n道具包用于增强通关体验与无尽冲分效率。道具可在 **剧情模式** 与 **无尽模式** 使用，但限制不同。\n\n## 道具包可用范围\n\n- 剧情模式：可使用\n- 无尽模式：可使用\n\n## 使用次数限制\n\n- **剧情模式**：通常 **不限制使用次数**（以游戏内显示为准）\n- **无尽模式**：单局 **每种道具最多使用 5 次**\n\n## 道具包收入分账（Item Packs Split）\n\n道具包售卖收入按以下比例分配：\n\n- **50%** -> **销毁（Burn）**\n- **40%** -> **平台金库（Treasury）**\n- **10%** -> **邀请人返佣（Referral）**\n\n## 为什么道具会销毁？\n\n- 形成长期通缩预期（减少流通供给）\n- 同时让平台收入与增长（返佣）有明确预算来源"
+      },
+      "referral": {
+        "title": "邀请返佣 10%",
+        "body": "# 邀请返佣 10%\n\n邀请返佣是 BLOCKWORLD 的增长引擎之一。我们只做 **一级返佣**，规则简单透明。\n\n## 返佣比例\n\n- **一级返佣：10%**\n- 你邀请的朋友在平台发生的部分消费，你可获得 10% 的 BWT 返佣。\n\n## 返佣覆盖哪些消费？\n\n在 v1.0 规则下，返佣通常覆盖：\n\n- **复活费用（Revive）**\n- **无尽模式门票（Ticket）**\n- **道具包购买（Item Packs）**\n\n> 返佣是否覆盖某些特殊活动消耗，以活动页说明为准。\n\n## 返佣如何结算？\n\n- 默认按活动/结算周期发放到你的账户余额（页面会显示“今日返佣/累计返佣”）。\n- 你也可以在页面查看 **链上返佣 Tx**（当链上结算开放时）。\n\n## 反作弊与无效返佣\n\n为保证真实裂变：\n\n- 如果系统识别到异常/脚本/自成交/批量账户集群，可能 **取消返佣** 或延迟结算。\n- 返佣以 **真人有效行为** 为基准（见 [安全与公平](./safety.md)）。\n\n## 我如何获取邀请链接？\n\n在邀请页面点击 **“获取我的邀请链接”**：\n\n- 复制链接发给朋友\n- 或使用分享按钮一键分享"
+      },
+      "transparency": {
+        "title": "透明看板与链上核验",
+        "body": "# 透明看板与链上核验\n\n透明是 BLOCKWORLD 的底层信任系统：  \n**玩家**看到公平，**Sponsor**看到交付，**投资者**看到可尽调。\n\n## 我可以在透明看板看到什么？\n\n典型包含以下模块（以官网实际页面为准）：\n\n- **今日已销毁（Burned Today）**\n- **宝盒奖池（Treasure Pool）**\n- **今日已返佣（Referral Paid Today）**\n- **平台金库（Treasury）**\n\n以及：\n\n- **Live Token Flow**：用户消耗 -> Pool/Burn/Referral/Treasury 的实时分流图  \n- **Recent Transactions（Tx Feed）**：按时间滚动显示最新交易（Burn/Pool/Referral/Treasury）\n\n## 为什么必须“链上公开”？\n\n- 任何人都可以通过区块浏览器核验资金是否真的进入奖池/销毁地址  \n- 减少“黑箱”争议，提升品牌可信度  \n- 对 Sponsor 来说，这是可审计的投放交付凭证\n\n## 渠道口径（v1.0）\n\n- **复活（Revive 10 BWT）**：50% Pool / 30% Burn / 10% Referral / 10% Treasury  \n- **无尽门票（Ticket 20 BWT）**：50% Pool / 30% Burn / 10% Referral / 10% Treasury  \n- **道具包（Item Packs）**：50% Burn / 10% Referral / 40% Treasury  \n\n> 如果你看到任何口径与页面不一致，请以官方公告与最新规则为准（并在社区反馈）。"
+      },
+      "safety": {
+        "title": "安全、公平与风控",
+        "body": "# 安全、公平与风控\n\n为了让“真人玩家”获得真实奖励，我们必须持续对抗脚本、批量设备与羊毛党。\n\n## Proof-of-Human（真人验证）\n\n我们会结合以下方式判断玩家是否为真人：\n\n- 行为轨迹与操作特征（如节奏、输入分布、随机性）\n- 对局日志重放验证（Verified Run）\n- 设备与账户风险信号（异常集群、异常登录等）\n\n> 目的：保护真人玩家的体验，同时保证 Sponsor 的预算不是被脚本刷走。\n\n## 可能触发风控的情况\n\n- 短时间内批量注册、批量设备切换\n- 异常高频复活/进出/领取\n- 明显脚本行为（重复路径、非人类输入特征）\n- 伪造邀请关系、自刷返佣等\n\n## 结算与发放策略\n\n为了安全与公平，我们可能采取：\n\n- **延迟结算**：对可疑账户先冻结，待复核后发放  \n- **大额奖励分期/线性释放**：降低抛压与作弊收益  \n- **取消资格/回收奖励**：若确认违规\n\n## 我觉得我被误判了怎么办？\n\n- 在帮助中心/客服入口提交申诉（占位）\n- 提供账号信息与时间段\n- 我们会在规则规定的时间内复核并给出结论"
+      },
+      "faq": {
+        "title": "FAQ 常见问题",
+        "body": "# FAQ 常见问题\n\n## 1) 真的能提现吗？\n提现功能是否开放、门槛与手续费以官网/客户端显示为准。  \n当提现开放时，你可以在个人中心查看可提现余额与链上记录。\n\n## 2) 我需要懂钱包吗？\n不需要。你可以先用 Google/邮箱登录开始游戏。  \n当你需要提现或参与更深度的链上活动时，我们会在流程中引导你完成必要步骤。\n\n## 3) 奖励从哪里来？\n主要来自三部分：  \n- 玩家消耗形成的奖池（宝盒/排行榜）  \n- Sponsor 合作预算（项目方/交易所/品牌）  \n- 平台活动预算\n\n并且所有关键流向会在透明看板公开。\n\n## 4) 为什么我没遇到惊喜盒子？\n惊喜盒子是随机出现的，受到玩法、活动配置与风控策略影响。  \n你也可以关注首页 “Today's Drops” 的活动提示。\n\n## 5) 邀请返佣怎么算？\n一级返佣 10%，覆盖复活/门票/道具包等消费（以活动页说明为准）。  \n返佣可能因风控核验而延迟或取消。\n\n## 6) 宝盒怎么开奖？\n每 2 小时开奖一次：50% 抽 100 名幸运玩家，另外 50% 分给其余宝盒持有人平分。  \n详见 [宝盒机制](./treasure-box.md)。\n\n## 7) 我怎么确认分账是真的？\n去 [透明看板](./transparency.md) 查看：流向图 + Tx Feed。  \n你可以点击 Tx 跳转区块浏览器核验。\n\n## 8) 参数会变吗？\n会。我们会根据用户体验、风控与合作需求迭代参数。  \n所有变更会公告，并在 Story Bible/官方规则中版本化。"
+      },
+      "quickStart": {
+        "title": "新手 3 步开玩",
+        "body": "# 新手 3 步开玩\n\n目标：**你不需要懂 Web3，也能先玩起来。**  \n我们希望你先体验“爽点”，再逐步理解钱包与链上透明。\n\n## Step 1：一键登录（无感）\n\n- 支持 **Google / 邮箱** 一键登录（具体入口以页面显示为准）。\n- 登录后会自动创建你的 **BW-ID 账户**（账户体系用于记录奖励、邀请关系与安全验证）。\n\n## Step 2：玩 60 秒（BlockRush）\n\n- 首发游戏为 **BlockRush（三消）**。\n- 单局 60 秒，像消消乐一样轻松。\n- **五连消** 触发随机空投：**5–100 BWT**（随机数量）。\n\n## Step 3：开盒子（奖励到手）\n\n你可能会遇到两类盒子：\n\n1) **惊喜盒子（Mystery Box）**  \n- 游戏中随机出现。  \n- 奖励来源可能包括：活动预算、Sponsor 合作掉落、平台奖励等。  \n\n2) **宝盒（Treasure Box）**  \n- 当你在剧情/无尽中 **使用 BWT 复活** 时，你会获得一个宝盒凭证。  \n- 宝盒会参与每 2 小时一次的开奖（详见宝盒页面）。\n\n## 下一步建议（让收益更稳定）\n\n- 去 [邀请返佣](./referral.md) 领取你的邀请链接（一级返佣 10%）。\n- 去 [透明看板](./transparency.md) 学会核验 BWT 的流向（奖池/销毁/返佣/平台金库）。\n- 想冲榜就看 [排行榜与无尽门票](./leaderboard.md)。"
+      },
+      "treasure": {
+        "title": "宝盒机制（每 2 小时开奖）",
+        "body": "# 宝盒机制（每 2 小时开奖）\n\n宝盒（Treasure Box）是 BLOCKWORLD 的核心“情绪系统”：  \n把“复活”从纯消耗变成带期待感的权益，同时把资金流向做成链上透明。\n\n## 如何获得宝盒？\n\n- 当你在剧情模式或无尽模式中 **支付 BWT 复活** 时：\n  - 你会获得 **1 个宝盒凭证**；\n  - 该笔复活费用会按固定比例进入宝盒奖池/销毁/返佣/平台金库。\n\n## 复活费用分账（Revive Split）\n\n每次复活支付 **10 BWT** 后，按以下比例分配：\n\n- **50%** -> 进入 **宝盒奖池（Treasure Pool）**\n- **30%** -> 打入 **黑洞地址销毁（Burn）**\n- **10%** -> 返给 **邀请人（Referral）**（仅一级）\n- **10%** -> 进入 **平台金库（Treasury）**\n\n> 所有分账渠道必须链上公开，并在透明看板中可视化展示。\n\n## 开奖频率\n\n- **每 2 小时开奖一次**  \n- 每一轮开奖对应一个固定时间窗口（例如 10:00–12:00）。\n\n## 奖池分配规则（每轮）\n\n设本轮宝盒奖池总额为 `P`（BWT）：\n\n1) **Lucky 100（随机 100 名）**  \n- 奖池的 **50%（0.5P）** 随机抽取 100 名幸运玩家分配  \n- 个人实际获得随轮次规模与随机抽取结果变化\n\n2) **Holder Share（其余宝盒持有人平分）**  \n- 奖池的 **50%（0.5P）** 分给本轮中 **除 Lucky 100 外** 的所有宝盒持有人平均分配\n\n> 目的：既有“中大奖”的高潮，也让大多数参与者获得“雨露均沾”的回报感。\n\n## 我怎么查看开奖结果？\n\n- 在官网/客户端的 **奖励盲盒/宝盒** 页面可以查看：\n  - 本轮奖池规模\n  - 倒计时（距离下次开奖）\n  - 本轮中奖名单（Lucky 100）\n  - 我的宝盒数量与预计分配\n\n## 风控与结算提示\n\n为了公平与安全：\n\n- 系统可能对异常账户进行延迟结算、复核或取消资格；\n- 大额奖励可能采用延迟发放或线性释放（以官方规则为准）。"
+      },
+      "leaderboard": {
+        "title": "排行榜与无尽门票",
+        "body": "# 排行榜与无尽门票\n\n无尽模式（Endless）是竞技与“冲榜”玩法。门票收入会形成排行榜奖池，同时保持链上透明。\n\n## 门票规则（Ticket）\n\n- **每日首局免费**\n- 当日后续进入无尽模式，需要购买 **20 BWT 入场券**\n\n## 无尽模式限制\n\n- 单局 **最多复活 5 次**\n- 单局 **每种道具最多使用 5 次**\n\n## 门票收入分账（Ticket Split）\n\n每张门票 **20 BWT** 的分账规则：\n\n- **50%** -> 进入 **排行榜奖池（Leaderboard Pool）**\n- **30%** -> 打入 **黑洞地址销毁（Burn）**\n- **10%** -> 返给 **邀请人（Referral）**\n- **10%** -> 进入 **平台金库（Treasury）**\n\n## 奖池如何分配？\n\n排行榜奖池的具体分配（Top N、按比例或固定档位）由排行榜页面规则决定。  \n在官网排行榜页会展示：\n\n- 当前奖池规模\n- 结算倒计时（如按日/按赛季）\n- Top 排名与预计奖励（Est. Prize）\n\n> 提醒：排行榜奖励可能受风控与资格规则影响。异常账户会被剔除或延迟结算。"
+      },
+      "welcome": {
+        "title": "BLOCKWORLD 帮助中心",
+        "body": "# BLOCKWORLD 帮助中心\n\n欢迎来到 BLOCKWORLD。这里是你开始游戏、理解奖励机制、查看链上透明与安全规则的统一入口。\n\n## 你可以在这里找到什么\n\n- **新手上路**：1 分钟内开始玩，0 成本理解基本概念。  \n- **玩法与模式**：剧情模式 / 无尽模式 / 排行榜。  \n- **奖励与掉落**：BWT、惊喜盒子（Mystery Box）、活动掉落、宝盒（Treasure Box）。  \n- **邀请返佣**：一级返佣 10% 的计算口径与规则。  \n- **透明看板**：BWT 流向链上公开，如何自查。  \n- **提现与账户安全**：流程、安全提示（占位完善）。  \n- **安全与公平**：Proof-of-Human（真人验证）、反作弊、延迟结算等。  \n- **Official Rules（官方规则）**：合规条款与替代参与方式（AMOE）占位。\n\n## 快速入口\n\n- [新手 3 步开始](./quick-start.md)\n- [玩法与模式](./game-modes.md)\n- [奖励与掉落总览](./rewards.md)\n- [关于 BWT](./bwt.md)\n- [宝盒机制（2 小时开奖）](./treasure-box.md)\n- [邀请返佣 10%](./referral.md)\n- [排行榜与无尽门票](./leaderboard.md)\n- [道具包与使用限制](./items.md)\n- [透明看板与 Tx 追踪](./transparency.md)\n- [提现与账户安全（占位）](./withdrawals.md)\n- [安全、公平与风控](./safety.md)\n- [FAQ](./faq.md)\n- [Official Rules（占位）](./official-rules.md)\n\n## 关键术语（先看这一段就够了）\n\n- **BWT**：BLOCKWORLD 的 Token（代币）。用于游戏内消耗（复活、门票、道具包等）与奖励结算。  \n- **惊喜盒子（Mystery Box）**：游戏过程中随机遇到的盒子，可能包含 BWT、Sponsor 奖励或活动掉落。  \n- **宝盒（Treasure Box）**：当你使用 BWT 复活时获得的“宝盒凭证”。每 2 小时开奖一次，按规则分享宝盒奖池。  \n- **透明看板（Transparency Dashboard）**：展示 BWT 在各渠道的实时/准实时流向（奖池、销毁、返佣、平台金库等），并提供链上交易（Tx）可核验。\n\n> 重要提示：本帮助中心用于解释玩法与活动规则，不构成任何收益承诺或投资建议。实际规则以官网与客户端最新版本显示为准。"
+      },
+      "withdraw": {
+        "title": "提现与账户安全",
+        "body": "# 提现与账户安全\n\n> 说明：提现流程与门槛可能随地区合规与风控策略调整。最终以产品内显示为准。\n\n## 提现入口在哪里？\n\n- 个人中心 / My Dashboard -> **提现（Withdraw）**\n\n## 提现可能需要哪些步骤？\n\n- 完成基础账号验证（如邮箱/手机号等，TBD）\n- 通过 Proof-of-Human 或风险复核（当触发风控时）\n- 绑定或确认收款地址（链上地址）\n\n## 提现门槛与手续费\n\n- 最小提现金额（TBD）\n- 手续费（TBD）：可能由链上手续费 + 平台处理费构成\n\n## 为什么有时会延迟到账？\n\n常见原因：\n\n- 链上拥堵导致确认慢\n- 触发风控复核（保护玩家与 Sponsor 预算）\n- 活动结算周期尚未结束\n\n## 安全建议\n\n- 不要向任何人泄露验证码/私钥/助记词\n- 谨防假冒客服与钓鱼链接\n- 只通过官网/客户端入口发起提现"
+      },
+      "modes": {
+        "title": "玩法与模式",
+        "body": "# 玩法与模式\n\nBLOCKWORLD 当前提供两类主要玩法：**剧情模式** 与 **无尽模式**。两种模式共享部分经济与道具体系，但限制不同。\n\n## 剧情模式（Story Mode）\n\n特点：更像传统关卡游戏，适合新手学习与轻度体验。\n\n- **时间耗尽可复活**：支付 **10 BWT** 复活，获得 **+30 秒** 继续游戏。\n- **道具包可用**：支持使用道具包。\n- **道具使用次数**：剧情模式通常 **不限制使用次数**（以游戏内显示为准）。\n- **风控提示**：为防止异常行为，系统可能对单局复活/道具使用设置合理上限或触发审核（以实际版本为准）。\n\n## 无尽模式（Endless Mode）\n\n特点：更偏竞技与循环体验，适合冲分与排行榜玩法。\n\n- **每日首局免费**：每天第一次进入无尽模式免费。\n- **之后需门票**：当日后续进入需要购买 **20 BWT 入场券**。\n- **复活次数限制**：无尽模式单局 **最多复活 5 次**（避免无限续命刷收益）。\n- **道具次数限制**：无尽模式单局 **每种道具最多使用 5 次**。\n\n## 为什么先做休闲小游戏？\n\n我们选择“有手就能玩”的休闲游戏，是为了：\n\n- 让更多 **Web2 玩家** 能无门槛进入；\n- 不要求先理解钱包、链、Gas；\n- 用“奖励/透明/公平”在 60 秒内形成直观信任；\n- 再通过提现、透明看板与活动规则完成教育。\n\n## 游戏上架节奏（内容矩阵）\n\n- **上架 1 款 + 预告 1 款**：例如首发 BlockRush（三消），同时预告下一款飞机射击类游戏。  \n- 目的：降低单游风险，持续供给新鲜内容，把核心资产沉淀在 **账户体系 + Sponsor 网络 + 透明系统**。"
+      },
+      "officialRules": {
+        "title": "Official Rules（官方规则，占位）",
+        "body": "# Official Rules（官方规则，占位）\n\n> 重要：以下为结构占位，用于投委会/法务与站点内容完整性。正式上线前需由法务根据运营地区完善并发布。\n\n## 1. Definitions（定义）\n\n- “BWT” 指 BLOCKWORLD 平台 Token（代币）。\n- “Mystery Box” 指游戏内随机掉落的惊喜盒子。\n- “Treasure Box” 指复活后获得的宝盒凭证。\n- “Treasure Pool / Leaderboard Pool” 指对应奖池。\n\n## 2. Eligibility（参与资格）\n\n- 年龄要求（TBD）\n- 地区限制：VOID WHERE PROHIBITED\n- 账号与风控要求：违反规则或被判定为脚本/异常行为者可能被取消资格\n\n## 3. How to Enter（如何参与）\n\n### 3.1 Standard Method（常规方式）\n- 通过游戏内行为获得参与资格（例如：复活获得宝盒等）\n\n### 3.2 AMOE — Alternative Method of Entry（替代参与方式，占位）\n- **NO PURCHASE NECESSARY TO ENTER OR WIN.**\n- 替代参与方式说明（TBD）：例如通过完成每日 Verified Run/任务获得免费宝盒参与资格等  \n- 提交方式、时间窗口、资格要求（TBD）\n\n## 4. Prize & Distribution（奖品与分配）\n\n- 宝盒开奖频率：每 2 小时一次（TBD 可按活动调整）\n- 分配规则：50% Lucky 100；50% Holder Share（以宝盒页面为准）\n- 排行榜奖池分配规则（TBD）\n\n## 5. Verification & Fraud（验证与反作弊）\n\n- Proof-of-Human / Verified Run（TBD）\n- 异常/脚本/女巫：取消资格、延迟结算、回收奖励\n\n## 6. Taxes & Fees（税务与费用）\n\n- 税务责任归属（TBD）\n- 链上转账手续费承担方式（TBD）\n\n## 7. Disclaimers（免责声明）\n\n- 奖励为促销性质，不构成收益承诺或投资建议\n- Token 价格波动风险由用户自行承担\n- 平台有权在合理范围内调整规则并公告\n\n## 8. Contact（联系方式）\n\n- 官方客服/邮箱/社区入口（TBD）"
+      },
+      "bwt": {
+        "title": "关于 BWT",
+        "body": "# 关于 BWT\n\n**BWT = BLOCKWORLD Token（代币）**。  \n它是平台内的通用计量单位，用于让“奖励、消耗、销毁、返佣、平台收入”都可以被公开核验。\n\n## BWT 可以用来做什么？\n\n### 1) 复活（Revive）\n- 剧情/无尽中时间耗尽可支付 **10 BWT** 复活，获得 **+30 秒**（以游戏内显示为准）\n- 复活会产生宝盒，并触发宝盒奖池分账\n\n### 2) 无尽门票（Endless Ticket）\n- 每日首局免费\n- 后续进入无尽需要 **20 BWT 入场券**\n- 门票收入进入排行榜奖池并部分销毁\n\n### 3) 道具包（Item Packs）\n- 可在剧情/无尽使用\n- 无尽模式每种道具单局最多 5 次\n- 道具包收入一半销毁\n\n## 我如何获得 BWT？\n\n常见方式包括：\n\n- 五连消空投（5–100 BWT）\n- 开惊喜盒子（活动/Sponsor 掉落）\n- 宝盒开奖分配\n- 排行榜结算奖励\n- 参与活动任务（如有）\n\n## BWT 的流向为什么要透明？\n\n因为透明可以：\n\n- 让玩家确认“奖池真的存在、销毁真的发生”\n- 让 Sponsor 确认“预算真的发给了真人”\n- 让投资者完成可核验尽调\n\n你可以在 [透明看板](./transparency.md) 查看所有主要渠道流向与 Tx 记录。"
+      }
+    },
+    "description": "指南、规则与支持。"
+  },
+  "sponsors": {
+    "hero": {
+      "title": "把你的营销预算，变成真实玩家的收益",
+      "subtitle": "Human‑only · 可衡量 · 链上可核验。",
+      "cta": {
+        "kit": "获取 Sponsor Kit（PDF）",
+        "call": "预约沟通"
+      }
+    },
+    "why": {
+      "title": "你得到什么",
+      "items": {
+        "0": "真实增量用户（完成教育/交互）",
+        "1": "可控露出（不破坏游戏体验）",
+        "2": "可审计报表（字段字典 + 链上凭证）"
+      }
+    },
+    "placements": {
+      "title": "可售位置",
+      "items": {
+        "0": "游戏内 Sponsor Box",
+        "1": "首页 Today’s Drops（今日掉落）",
+        "2": "奖池冠名（宝盒/排行榜）",
+        "3": "奖励中心活动卡"
+      },
+      "note": "库存与排期以 Sponsor Kit 为准。"
+    },
+    "guarantee": {
+      "title": "我们的承诺：只为真人买单",
+      "body": "我们以 Proof-of-Human 验证“真人有效参与”。若无效流量率超出约定阈值，我们将按 SLA 提供补量或 Credit 补偿，并在 7 个工作日内完成复盘与处理。"
+    },
+    "measurement": {
+      "title": "如何衡量",
+      "body": "我们用“真人有效参与 + 关键转化事件”衡量投放效果，并提供可核验交易凭证。"
+    },
+    "contact": {
+      "title": "联系商务",
+      "body": "请通过邮箱/Telegram 联系（填写你们实际渠道）。"
+    }
+  },
+  "investors": {
+    "hero": {
+      "title": "BLOCKWORLD：Web3 大规模采用协议",
+      "subtitle": "用休闲游戏，把 30 亿 Web2 玩家无痛转化为 Web3 公民。",
+      "cta": {
+        "kit": "下载 Investor Kit（Deck + Memo）",
+        "call": "预约沟通"
+      }
+    },
+    "thesis": {
+      "title": "核心观点",
+      "points": {
+        "0": "Web3 现状是存量内卷，高 CAC。",
+        "1": "Web2 休闲玩家是最大的增量入口。",
+        "2": "我们用“开玩—开盒—提现即教育—链上透明”跑通转化与商业闭环。"
+      }
+    },
+    "moat": {
+      "title": "护城河",
+      "items": {
+        "0": "BW‑ID 账户体系（无感接入）",
+        "1": "Sponsor Engine（广告分发协议）",
+        "2": "Proof-of-Human（真人验证层）",
+        "3": "On-chain Transparency（链上公开透明）"
+      }
+    },
+    "team": {
+      "title": "团队契合度（Founder‑Market Fit）",
+      "subtitle": "用可验证的经验与产出来证明：我们懂游戏、懂广告、懂链上风控。",
+      "roles": {
+        "0": {
+          "title": "Gaming DNA",
+          "body": "休闲游戏留存与数值策划经验：关卡节奏、爽点设计、反作弊与长期玩法迭代。"
+        },
+        "1": {
+          "title": "AdTech DNA",
+          "body": "广告产品化与归因报表经验：SLA、字段字典、无效流量治理与投放优化闭环。"
+        },
+        "2": {
+          "title": "Crypto Native",
+          "body": "合约安全与风控经验：资金流透明、参数化治理、反套利与异常行为处置机制。"
+        }
+      },
+      "note": "团队与顾问信息请以 Investor Kit 为准。"
+    },
+    "roadmap": {
+      "title": "路线图",
+      "body": "上架 1 款（Block Rush）+ 预告 1 款（飞机射击）；逐步扩展游戏矩阵与 Sponsor 网络。"
+    },
+    "riskControl": {
+      "title": "风险控制",
+      "items": {
+        "0": "大额奖励分期释放 + 可选即时领取（额外销毁）",
+        "1": "Proof-of-Human 保护真实玩家与 Sponsor 预算",
+        "2": "链上公开透明的资金流向与可核验交易凭证"
+      }
+    },
+    "contact": {
+      "title": "投资沟通",
+      "body": "请通过投资沟通邮箱/Telegram 联系（填写你们实际渠道）。"
+    }
+  },
+  "legal": {
+    "header": {
+      "title": "官方规则与条款",
+      "subtitle": "Official Rules（AMOE）、服务条款、隐私政策与风险提示。"
+    },
+    "pages": {
+      "officialRules": {
+        "title": "官方规则（AMOE）",
+        "body": "NO PURCHASE NECESSARY 等条款适用范围因地区而异。本页面为规则入口，具体活动将提供对应的 Official Rules 文档与参与方式说明。"
+      },
+      "terms": {
+        "title": "服务条款",
+        "body": "本页面为服务条款入口。条款将覆盖账户使用、内容与服务、用户行为规范、责任限制等内容。"
+      },
+      "privacy": {
+        "title": "隐私政策",
+        "body": "本页面为隐私政策入口。将说明数据收集、使用、存储与用户权利等内容。"
+      },
+      "risk": {
+        "title": "风险提示",
+        "body": "Token、活动奖励与网络交互存在风险。请在理解规则与地区限制后参与。"
+      }
+    }
+  },
+  "withdraw": {
+    "title": "提现",
+    "balance": "当前余额",
+    "amount": "提现金额",
+    "method": "提现方式",
+    "max": "全部",
+    "submit": "提交申请",
+    "note": "提现需通过真人验证。大额奖励可能分期释放。",
+    "verify": "查看链上记录"
+  },
+  "aha": {
+    "treasureReferral": "宝盒与返佣"
+  },
+  "treasure": {
+    "title": "宝盒开奖（每 2 小时一次）",
+    "subtitle": "每次复活都会获得 1 个宝盒。下一次开奖倒计时：",
+    "winners": "查看上轮赢家",
+    "cta": "查看本轮奖池"
+  },
+  "chips": {
+    "treasurePool": "宝盒奖池"
+  },
+  "steps": {
+    "title": "3 步开玩",
+    "subtitle": "不用懂币圈，只要开心。",
+    "s1Title": "一键登录",
+    "s1Body": "用 Google 或邮箱登录，自动创建安全账户。",
+    "s2Title": "玩 60 秒",
+    "s2Body": "快节奏三消，Q 弹特效。",
+    "s3Title": "打开盒子",
+    "s3Body": "随机遇到盒子，打开拿奖励。"
+  }
 }

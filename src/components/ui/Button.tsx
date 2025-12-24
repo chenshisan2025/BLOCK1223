@@ -7,7 +7,7 @@ function cn(...inputs: ClassValue[]) {
 }
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'candy' | 'ghost';
+  variant?: 'candy' | 'ghost' | 'soft' | 'danger';
   children: React.ReactNode;
 }
 
@@ -17,7 +17,11 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       <button
         ref={ref}
         className={cn(
-          variant === 'candy' ? 'btn-candy' : 'btn-ghost',
+          'transition-all duration-200 active:scale-95 disabled:opacity-50 disabled:pointer-events-none',
+          variant === 'candy' && 'btn-candy',
+          variant === 'ghost' && 'btn-ghost',
+          variant === 'soft' && 'bg-purple-100 text-purple-700 hover:bg-purple-200',
+          variant === 'danger' && 'bg-red-50 text-red-600 hover:bg-red-100 border border-red-200',
           className
         )}
         {...props}

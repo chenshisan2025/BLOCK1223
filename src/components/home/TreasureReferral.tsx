@@ -6,6 +6,21 @@ import { Link } from 'react-router-dom';
 
 export const TreasureReferral: React.FC = () => {
   const { t } = useLanguage();
+  const [timeLeft, setTimeLeft] = React.useState(5025); // 01:23:45 in seconds
+
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft((prev) => (prev > 0 ? prev - 1 : 7200)); // Reset to 2 hours if 0
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const formatTime = (seconds: number) => {
+    const h = Math.floor(seconds / 3600);
+    const m = Math.floor((seconds % 3600) / 60);
+    const s = seconds % 60;
+    return `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+  };
 
   return (
     <section className="max-w-6xl mx-auto px-6 mb-20">
@@ -55,7 +70,7 @@ export const TreasureReferral: React.FC = () => {
             <div className="flex items-start justify-between mb-2">
               <h3 className="text-2xl font-bold text-ink">{t('treasure.title')}</h3>
               <div className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
-                <Timer weight="fill" /> 01:23:45
+                <Timer weight="fill" /> {formatTime(timeLeft)}
               </div>
             </div>
             

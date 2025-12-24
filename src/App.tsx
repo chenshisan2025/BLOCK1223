@@ -9,6 +9,7 @@ import { Events } from './pages/Events';
 import { Leaderboard } from './pages/Leaderboard';
 import { Invite } from './pages/Invite';
 import { Transparency } from './pages/Transparency';
+import { Help } from './pages/Help';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="/leaderboard" element={<Leaderboard />} />
             <Route path="/invite" element={<Invite />} />
             <Route path="/transparency" element={<Transparency />} />
+            <Route path="/help" element={<Help />} />
             <Route path="*" element={<Home />} />
           </Routes>
           <Footer />

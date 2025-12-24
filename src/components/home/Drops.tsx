@@ -5,12 +5,12 @@ import { Card } from '../ui/Card';
 import { Link } from 'react-router-dom';
 
 const dropItems = [
-  { icon: "💰", label: "500 USDT", sub: "Prize Pool" },
-  { icon: "💎", label: "Rare Badge", sub: "Limited" },
-  { icon: "🎁", label: "Mystery Box", sub: "Partner Drop" },
-  { icon: "⚡️", label: "2x BWT", sub: "Event" },
-  { icon: "🔥", label: "1 BNB", sub: "Jackpot" },
-  { icon: "🎟️", label: "Season Pass", sub: "Ticket" }
+  { icon: "💰", label: "500 USDT", sub: "Prize Pool", sponsor: "Binance" },
+  { icon: "💎", label: "Rare Badge", sub: "Limited", sponsor: null },
+  { icon: "🎁", label: "Mystery Box", sub: "Partner Drop", sponsor: "Uniswap" },
+  { icon: "⚡️", label: "2x BWT", sub: "Event", sponsor: null },
+  { icon: "🔥", label: "1 BNB", sub: "Jackpot", sponsor: "Binance" },
+  { icon: "🎟️", label: "Season Pass", sub: "Ticket", sponsor: null }
 ];
 
 export const Drops: React.FC = () => {
@@ -24,19 +24,26 @@ export const Drops: React.FC = () => {
         <div className="flex-shrink-0 px-6 py-4 md:border-r border-purple-100 min-w-[200px] text-center md:text-left">
           <div className="flex items-center justify-center md:justify-start gap-2 mb-1">
             <Sparkle weight="fill" className="text-yellow-500 text-lg" />
-            <h3 className="font-bold text-ink">{t('drops.title')}</h3>
+            <h3 className="font-bold text-ink">{t('home.drops.title')}</h3>
           </div>
-          <p className="text-xs text-subtext">{t('drops.subtitle')}</p>
+          <p className="text-xs text-subtext">{t('home.drops.subtitle')}</p>
         </div>
         
         {/* Marquee Container */}
         <div className="flex-1 w-full overflow-hidden marquee-container relative mask-gradient">
           <div className="flex gap-4 animate-marquee w-max py-4 hover:[animation-play-state:paused]">
             {[...dropItems, ...dropItems].map((item, index) => (
-              <div key={index} className="flex items-center gap-3 bg-white border border-purple-100 rounded-full pl-2 pr-4 py-1.5 shadow-sm min-w-[140px]">
+              <div key={index} className="flex items-center gap-3 bg-white border border-purple-100 rounded-full pl-2 pr-4 py-1.5 shadow-sm min-w-[140px] relative group/item">
                 <div className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-lg">{item.icon}</div>
                 <div>
-                  <div className="text-xs font-bold text-ink">{item.label}</div>
+                  <div className="text-xs font-bold text-ink flex items-center gap-1">
+                    {item.label}
+                    {item.sponsor && (
+                      <span className="text-[9px] bg-gray-100 text-gray-500 px-1 rounded transform scale-90 origin-left border border-gray-200">
+                        {item.sponsor}
+                      </span>
+                    )}
+                  </div>
                   <div className="text-[10px] text-purple-500 font-bold uppercase tracking-wider">{item.sub}</div>
                 </div>
               </div>
@@ -47,7 +54,7 @@ export const Drops: React.FC = () => {
         {/* CTA */}
         <div className="hidden md:block pr-6 pl-2">
           <Link to="/rewards" className="text-sm font-bold text-purple-600 hover:text-purple-700 whitespace-nowrap">
-            {t('drops.cta')} →
+            {t('home.drops.cta')} →
           </Link>
         </div>
       </Card>
@@ -61,7 +68,7 @@ export const Drops: React.FC = () => {
               <TreasureChest weight="fill" className="text-2xl" />
             </div>
             <div>
-              <p className="text-xs font-bold text-subtext uppercase tracking-wide">{t('chips.treasurePool')}</p>
+              <p className="text-xs font-bold text-subtext uppercase tracking-wide">{t('home.arcadeLive.kpi.treasurePool')}</p>
               <p className="text-xl font-black text-ink">580,400 <span className="text-sm font-bold text-purple-500">BWT</span></p>
             </div>
           </div>
@@ -79,12 +86,12 @@ export const Drops: React.FC = () => {
               <Trophy weight="fill" className="text-2xl" />
             </div>
             <div>
-              <p className="text-xs font-bold text-subtext uppercase tracking-wide">{t('chips.leaderboardPool')}</p>
+              <p className="text-xs font-bold text-subtext uppercase tracking-wide">{t('home.arcadeLive.kpi.leaderboardPool')}</p>
               <p className="text-xl font-black text-ink">25,000 <span className="text-sm font-bold text-yellow-500">BWT</span></p>
             </div>
           </div>
           <Link to="/leaderboard" className="px-4 py-2 bg-yellow-400 hover:bg-yellow-300 text-yellow-900 font-bold rounded-lg text-sm transition-colors shadow-sm">
-            {t('chips.playEndless')}
+            {t('common.cta.playNow')}
           </Link>
         </div>
       </div>

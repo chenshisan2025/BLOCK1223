@@ -1,7 +1,9 @@
 import React from 'react';
 import { Cube } from '@phosphor-icons/react';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 export const Footer: React.FC = () => {
+  const { t } = useLanguage();
   return (
     <footer className="border-t border-purple-100 bg-white/50 backdrop-blur-md mt-auto">
       <div className="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center gap-6">
@@ -10,7 +12,7 @@ export const Footer: React.FC = () => {
           <span className="font-bold">BLOCKWORLD</span>
         </div>
         <div className="text-xs text-gray-400">
-          © 2024 BlockWorld. Human-only Arcade.
+          {t('footer.copyright')}
         </div>
       </div>
     </footer>
